@@ -9,10 +9,10 @@ function getSelectedText(selectList){
 function validateForm(term){
 	var ename = term.ename.value;
 	var email = term.email.value;
-	var coptions = term.courseOptions.value;
-	var doptions = term.doptions.value
+	var coptions = term.cOptions.value;
+	var doptions = term.dOptions.value
 				
-	if (ename=="" && email=="" && courseOptions=="" && doptions=="" && getSelectedValue(term.subject)=="none"){
+	if (ename=="" && email=="" && cOptions=="" && dOptions=="" && getSelectedValue(term.subject)=="none"){
 		alert("Please fill the form");
 		return false;
 	}
@@ -25,10 +25,10 @@ function validateForm(term){
 		alert("Please Enter your E-Mail address");
 		return false;}
 					
-	else if (coursesOptions==""){
+	else if (cOptions==""){
 		alert("Please Enter your Courses");
     }
-	else if (doptions==""){
+	else if (dOptions==""){
 		alert("Please Enter your Duration");
     }
 	
@@ -40,23 +40,23 @@ function validateForm(term){
 		alert("'.com' is required for your email");
 		return false;}
 
-	else if (getSelectedValue(term.courseOptions)=="none"){
-		alert("Please select a Course Options");
+	else if (getSelectedValue(term.cOptions)=="None"){
+		alert("Please select a Options");
 		return false;}
 
-	else if (getSelectedValue(term.duration)=="none"){
-		alert("Please select a Duration Options");
+	else if (getSelectedValue(term.dOptions)=="None"){
+		alert("Please select a  Options");
 		return false;}
 
 	else{
-		frm.style.display = "none";
+		frm.style.display = "None";
 		return true;}
 }
 
 function showDiv(){
-	document.term1.style.display = "block";
-	var summary = document.getElementById("Invoice Details");
-	summary.style.display = "none";
+	document.term1.style.display = "Block";
+	var summary = document.getElementById(" Details");
+	summary.style.display = "None";
 	return true;
 }
 
@@ -65,16 +65,16 @@ function resetForm(){
 }
 
 function validate(term) {
-	var summary = document.getElementById("Invoice Details");
+	var summary = document.getElementById(" ");
 	if(validateForm(term)){
 	var ename = term.ename.value;
 	var email = term.email.value;
-	var coptions = term.courseOptions.value;
-	var doptions = term.doptions.value
+	var coptions = term.cOptions.value;
+	var doptions = term.dOptions.value
 	document.getElementById("Enter Name").innerHTML =newFunction("ename").innerHTML;
 	document.getElementById("E-mail Address").innerHTML =newFunction("email").innerHTML;
-	document.getElementById("Courses Options").innerHTML =newFunction("courseOptions").innerHTML;
-	document.getElementById("Duration Options").innerHTML =newFunction("doptions").innerHTML;
+	document.getElementById(" cOptions").innerHTML =newFunction("cOptions").innerHTML;
+	document.getElementById(" dOptions").innerHTML =newFunction("dOptions").innerHTML;
 	summary.style.display = "Finished";
 	}
 
@@ -92,50 +92,24 @@ function getRadioValue(radioArray){
 	}
 	return "";
 }
-function invoicedetails(invoice){
-	alert(invoice);
+function details(){
+	alert();
 
-	switch(invoice){
-		case "12months":
-			document.getElementById("invoice").innerHTML = document.getElementById("SE").innerHTML;
+	switch(){
+		case "":
+			document.getElementById("").innerHTML = document.getElementById("SE").innerHTML;
 			break;
 
-		case "06months":
-			document.getElementById("invoice").innerHTML = document.getElementById("CS").innerHTML;
+		case "":
+			document.getElementById("").innerHTML = document.getElementById("CS").innerHTML;
 			break;
 			
-		case "03months":
-			document.getElementById("invoice").innerHTML = document.getElementById("AI").innerHTML;
+		case "":
+			document.getElementById("").innerHTML = document.getElementById("AI").innerHTML;
 			break;
 
 		default:
-			document.getElementById("invoice").innerHTML = "";
-			break;
-	}
-}
-
-function checkOptions(invoice2){
-	alert(invoice2);
-
-	switch(invoice2){
-		case "java":
-			document.getElementById("invoice2").innerHTML = document.getElementById("SE").innerHTML;
-			break;
-
-		case "python":
-			document.getElementById("invoice2").innerHTML = document.getElementById("CS").innerHTML;
-			break;
-			
-		case "microsoft":
-			document.getElementById("invoice2").innerHTML = document.getElementById("AI").innerHTML;
-			break;
-
-		case "html":
-			document.getElementById("invoice2").innerHTML = document.getElementById("AI").innerHTML;
-			break;
-
-		default:
-			document.getElementById("invoice").innerHTML = "";
+			document.getElementById("").innerHTML = "";
 			break;
 	}
 }
