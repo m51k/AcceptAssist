@@ -1,0 +1,8 @@
+# Get html of webpage
+import requests
+
+r = requests.get('https://www.edureka.co/blog/web-scraping-with-python/')
+
+print(r)
+
+print(r.content)
