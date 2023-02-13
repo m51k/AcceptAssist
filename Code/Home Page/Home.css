@@ -1,0 +1,41 @@
+
+.h1 {
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.5rem;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  text-shadow: 2px 2px #2c2c2c;
+  margin-top: 5%;
+}
+
+.h1a{
+  font-family: 'Times New Roman';
+  color: rgb(11, 11, 12) ;  
+  text-align: center;
+  font-size: 40px ;
+    
+}
+
+.h1b {
+  font-family: 'Times New Roman';
+  color: rgb(11, 11, 12) ;
+	text-align: left;
+  font-size: 40px ;
+}
+
+.h2{
+  font-family:'Times New Roman';
+  color:black;
+  font-size: 25px;
+	text-align: center;
+	align-items: center;
+}
+
+
+ 
+.body{
+    font-family:'Times New Roman';
+    background-color: #181616;
+    font-size: 18px;  
+}
