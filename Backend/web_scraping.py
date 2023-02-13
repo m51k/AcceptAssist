@@ -1,10 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://www.example.com/university-admission-requirements"
+url = "https://collegedunia.com/exams/toefl/toefl-score-for-top-us-universities"
 
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
+
+# print the html source code
+print(soup.prettify())
 
 # Extract the information on minimum scores for the GRE, GPA, TOEFL, and SOP/LOR
 # GRE score
