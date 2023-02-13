@@ -4,6 +4,9 @@ Pasan - Logging Page
 	Register Page
 	Navigation Bar
 
-Mohanranjan - Home Page
+Mohanranjan - 
+		Home Page
+		About us Page
+		User Page
 
 Nehan - Results Page
