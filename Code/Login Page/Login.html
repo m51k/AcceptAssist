@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavBar</title>
+    <title>AcceptAssist - Login</title>
     <link rel="stylesheet" href="./Login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
-<body>
+<body style="background-image: url(./Resources/university-westminster_web.jpg); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
     <div id="navBar">
         <div id="navBarLi">
             <header id="navHeader">
@@ -31,9 +32,43 @@
         </div>
     </div>
 
-    <div id="logingPage">
-        <div id="loginBox">
-            
+    <div id="logingPage">       <!-- Backgroung Picture in this div-->
+        <div id="loginBox">     <!-- Login box area -->
+            <div class="container">
+                <div class="top_header">
+                    <span>Have an account ? Let's login...</span>
+                    <header>Login</header>
+                </div>
+
+                <div class="input_field">
+                    <input type="text" name="username" class="input" placeholder="Username" required>
+                    <i class="material-symbols-outlined">person</i>
+                </div>
+
+                <div class="input_field">
+                    <input type="password" name="password" class="input" placeholder="Password" required>
+                    <i class="material-symbols-outlined">key</i>
+
+                </div>
+                
+                <div class="input_field">
+                    <form action="/Code/Register Page/Register.html">
+                        <input type="submit" value="Login" class="submit">
+                    </form>
+                </div>
+
+                <div class="bottom">
+                    <div class="TnC">
+                        <input type="checkbox" name="check" id="check" required>
+                        <label for="check"> I have read and agree with <a href="">terms & coditions</a></label>  <!-- Add terms and conditions -->
+                    </div>
+
+                    <div class="register">
+                        <label> Don't have an account? <a href="/Code/Register Page/Register.html">Sign Up</a></label>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
