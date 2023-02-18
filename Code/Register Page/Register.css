@@ -7,6 +7,25 @@
     box-sizing: border-box;
 }
 
+
+
+
+body {
+    background-image: url("/Code/Login Page/Resources/university-westminster_web.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#head {
+    position: fixed;
+    width: 100vw;
+}
+
+
+
+
 /* Navigation bar styling */
 
 /* Unordered list styling part (selecting menue list part) */
@@ -67,3 +86,6 @@
     cursor: pointer;
     width: 100px;
     }
+
+
+
