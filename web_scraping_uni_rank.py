@@ -1,13 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://www.topuniversities.com/university-rankings/world-university-rankings/2022"
+url = "https://www.timeshighereducation.com/world-university-rankings/2021/world-ranking#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats"
 
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 
 # print the html source code
-print(soup.prettify())
+# print(soup.prettify())
 
 # Find all the university information blocks on the page
 university_blocks = soup.find_all("tr")
