@@ -1,0 +1,23 @@
+        <div id="loginBox">     <!-- Login box area -->
+            <div id="fieldLogin">               <!-- Login fielsd area -->
+                <h1>Login</h1>
+                <div id = "logFields">
+                    <form action="">                        <!-- Add action file here -->
+                        <label for="username" class="login_lbl">Username : </label>
+                        <input type="text" class="login_input" name="username" id="in_username">
+                        <br>
+                        <label for="password" class="login_lbl">Password : </label>
+                        <input type="password" class="login_input" name="password" id="in_password">
+                        <br>
+                        <input type="submit" value="Login">
+                    </form>
+                </div>
+            </div>
+
+            <div>
+
+            </div>
+        </div>
+
+
+
