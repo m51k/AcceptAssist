@@ -88,7 +88,8 @@
         color: #fff;
         margin: 0 0% 200px 35%;
         margin-left: 50%;
-        background: rgba(105, 101, 101, 0.8);
+        /* background: rgba(105, 101, 101, 0.8); */
+        background-image: radial-gradient(farthest-corner at 50% -75%, #74AEF5 30%, #024FAA);
         border-top-right-radius: 35px;
         border-bottom-right-radius: 35px;
     }
@@ -166,6 +167,10 @@
                     background: rgba(255, 255, 255, 0.7);
                     cursor: pointer;
                     transition: 0.3s;
+                }
+
+                .input_field [type="submit"] {
+                    color: #1175ef;
                 }
 
                 .submit:hover {
