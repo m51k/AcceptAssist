@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 # dataset that contains the GRE and TOEFL scores along with the university acceptance percentage
 # not created yet
-data = pd.read_csv('university_data.csv')
+data = pd.read_csv()
 
 
 
