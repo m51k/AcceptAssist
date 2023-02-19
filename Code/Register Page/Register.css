@@ -7,25 +7,6 @@
     box-sizing: border-box;
 }
 
-
-
-
-body {
-    background-image: url("/Code/Login Page/Resources/university-westminster_web.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-#head {
-    position: fixed;
-    width: 100vw;
-}
-
-
-
-
 /* Navigation bar styling */
 
 /* Unordered list styling part (selecting menue list part) */
@@ -89,3 +70,133 @@ body {
 
 
 
+
+/* Register Page Styling */
+
+#RegisterPage{
+    background-color: black;
+    margin: 10% 10% 200px 10%;
+    border-radius: 35px;
+    /* position:initial; */
+}
+
+    #RegisterBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+        color: #fff;
+        margin: 0 0% 200px 35%;
+        margin-left: 50%;
+        background: rgba(105, 101, 101, 0.8);
+        border-top-right-radius: 35px;
+        border-bottom-right-radius: 35px;
+    }
+
+        .container {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 15px 0 15px;
+
+        }
+
+            .top_header {
+                margin-bottom: 40px;
+            }
+
+                .container span {
+                    font-size: small;
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px 0 10px 0;
+                }
+
+                .container header {
+                    font-size: 30px;
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px 0 10px 0;
+                }
+
+            .input_field {
+                display: flex;
+                flex-direction: column;
+            }
+            
+                .input {
+                    height: 45px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    border-radius: 30px;
+                    padding: 0 0 0 45px;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+
+                    ::-webkit-input-placeholder {
+                        color: #fff;
+                    }
+
+                .input_field i {
+                    position: relative;
+                    top: -35px;
+                    left: 15px;
+                    color: #fff;
+                    width: 25px;
+                }
+
+                .TnC {
+                    font-size: small;
+                    padding-bottom: 40px;
+                }
+
+                .TnC a {
+                    font-weight: 400;
+                    color: #fff;
+                }
+                
+                .submit {
+                    border: none;
+                    outline: none;
+                    border-radius: 30px;
+                    font-size: 16px;
+                    height: 45px;
+                    width: 100%;
+                    background: rgba(255, 255, 255, 0.7);
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                .submit:hover {
+                    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.3);
+                }
+
+                .material-symbols-outlined {
+                    font-variation-settings:
+                    'FILL' 0,
+                    'wght' 200,
+                    'GRAD' 0,
+                    'opsz' 48
+                  }
+            
+            .bottom {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: small;
+                margin-top: 10px;
+            }
+
+                    #check {
+                        accent-color: rgb(42, 230, 42);
+                    }
+
+
+            .signin a {
+                color: #fff;                
+            }
+
+body image {
+    opacity: 0.5;
+}

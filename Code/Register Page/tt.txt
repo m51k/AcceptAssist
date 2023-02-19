@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AcceptAssist - Register</title>
+
+    <link rel="stylesheet" href="./Register.css">
+</head>
+
+
+<body>
+
+    <div id="head">
+        <div id="navBar">
+            <div id="navBarLi">
+                <header id="navHeader">
+                    <!-- <div id="navLogoArea">
+                        <img class="webLogo" src="./westminster-img.png" alt="Web page logo">
+                    </div> -->
+                    <nav id="naviNav">
+                        <ul class="navLinks">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Explore</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div id="navLogoArea">
+                <img class="webLogo" src="/Code/Login Page/Resources/westminster-img.png" alt="Web page logo">
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div id="logingBox">
+        <div class="container">
+            <div class="top_header">
+                <span>Let's create new account...</span>
+                <header>Register</header>
+            </div>
+
+            <form action="">
+                <div class="input_field">
+                    <input type="text" name="fullname" class="input" placeholder="Full Name" required>
+                </div>
+
+                <div class="input_field">
+                    <input type="text" name="username" class="input" placeholder="Username" required>
+                </div>
+
+                <div class="input_field">
+                    <input type="email" name="email" class="input" placeholder="Email" required>
+                </div>
+
+                <div class="input_field">
+                    <input type="tel" name="phoneNo" class="input" placeholder="Phone Number" pattern="07[0,1,6,7,5,2]{1} [0-9]{7}"  onkeyup="this.value=this.value.replace(/^(\d{3})(?=\d)/,'$1 ')">
+                </div>
+
+                <div class="input_field">
+                    <input type="text" name="country" class="input" placeholder="Country">
+                </div>
+
+                <div class="input_field">
+                    <input type="password" name="password" class="input" placeholder="Password" minlength="8" required>
+                </div>
+
+                <div class="input_field">
+                    <input type="password" name="rePassword" class="input" placeholder="Confirm Password" minlength="8" required>
+                </div>
+
+                <div class="TnC">
+                    <input type="checkbox" name="check" id="check" required>
+                    <label for="check"> I have read and agree with <a href="">terms & conditions</a></label>    <!-- Add terms and conditions here -->
+                </div>
+
+                <div class="input_field">
+                        <input type="submit" value="Sign up" class="submit">
+                </div>
+            </form>
+
+            <div class="bottom">
+                <div class="register">
+                    <label> Already have an account? <a href="/Code/Login Page/Login.html">Sign in</a></label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
