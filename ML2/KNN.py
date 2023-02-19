@@ -6,9 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 # dataset that contains the GRE and TOEFL scores along with the university acceptance percentage
 # not created yet
-data = pd.read_csv()
-
-
+data = pd.read_csv('university_data.csv')
 
 # split the data into training and testing sets using a 70:30 split ratio
 X = data.iloc[:, :-1].values
@@ -20,11 +18,9 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-
 # KNN model with k=5:
 knn = KNeighborsRegressor(n_neighbors=5)
 knn.fit(X_train, y_train)
-
 
 # use the trained model to predict the university acceptance percentage
 # for a new student based on their GRE and TOEFL scores
