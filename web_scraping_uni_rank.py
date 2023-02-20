@@ -9,17 +9,31 @@ soup = BeautifulSoup(page.content, "html.parser")
 # print the html source code
 # print(soup.prettify())
 
-# Find the HTML element with class name "my-class"
-university_blocks = soup.find_all("div", {"class": "_qs-ranking-data-row normal-row"})
+# Getting the title tag
+print(soup.title)
 
-# Extract the information for each university
-for block in university_blocks:
-    name = block.find("div", {"class": "td-wrap"}).text.strip()
-    location = block.find("div", {"class": "location "}).text.strip()
-    world_rank = block.find("div", {"class": "_univ-rank hide-this-in-mobile-indi "}).text.strip()
+# Getting the name of the tag
+print(soup.title.name)
 
-    # Print the extracted information
-    print("Name:", name)
-    print("Location:", location)
-    print("World Rank:", world_rank)
-    print("---")
+# Getting the name of parent tag
+print(soup.title.parent.name)
+
+# Find the HTML element with class name "row ind "
+university_blocks = soup.find_all('div', class_='row')
+
+for university_block in university_blocks:
+    print(university_block)
+
+
+
+# # Extract the information for each university
+# for block in university_blocks:
+#     name = block.find("a", class_="uni-link")
+#     location = block.find("div", class_="location ")
+#     world_rank = block.find("div", class_="_univ-rank hide-this-in-mobile-indi ")
+#
+#     # Print the extracted information
+#     print("Name:", name)
+#     print("Location:", location)
+#     print("World Rank:", world_rank)
+#     print("---")
