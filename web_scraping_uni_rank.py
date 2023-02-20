@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://www.timeshighereducation.com/world-university-rankings/2021/world-ranking#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats"
+url = 'https://www.topuniversities.com/university-rankings/world-university-rankings/2022'
 
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
@@ -9,14 +9,14 @@ soup = BeautifulSoup(page.content, "html.parser")
 # print the html source code
 # print(soup.prettify())
 
-# Find all the university information blocks on the page
-university_blocks = soup.find_all("tr")
+# Find the HTML element with class name "my-class"
+university_blocks = soup.find_all("div", {"class": "_qs-ranking-data-row normal-row"})
 
 # Extract the information for each university
 for block in university_blocks:
-    name = block.find("td", {"class": "uni"}).text
-    location = block.find("td", {"class": "location"}).text
-    world_rank = block.find("td", {"class": "rank"}).text.strip()
+    name = block.find("div", {"class": "td-wrap"}).text.strip()
+    location = block.find("div", {"class": "location "}).text.strip()
+    world_rank = block.find("div", {"class": "_univ-rank hide-this-in-mobile-indi "}).text.strip()
 
     # Print the extracted information
     print("Name:", name)
