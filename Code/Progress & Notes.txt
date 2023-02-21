@@ -1,0 +1,60 @@
+Progress :
+
+Navigation Bar HTML and CSS Files have been added to the Navigation Bar folder. Use the HTML and CSS code to your code.
+
+Pasan - Logging Page
+	    Register Page
+	    Navigation Bar
+        Footer 
+        Searching Page
+
+Mohanranjan - 
+		Home Page
+		About us Page
+		User Page
+
+Nehan - Results Pages
+
+
+
+
+
+
+Notes:
+
+
+For linking files in html lets use these formats;
+                                to link files in same directory or in sub directory;
+                                                                ./file_name
+                                                                ./sub-directory_name/file_name
+
+                                to link files in different directory;
+                                                                /Code/directory_name/file_name
+                                                                /Code/directory_name/sub-directory_name/file_name
+
+Let's use these formats and don't use complete file paths. This will try to avoid conflict between mac and windows users when linking files. 
+
+
+
+Google Fonts:
+
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+    font-family: 'Quicksand', sans-serif;
+
+
+
+Google Icons:
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 48
+    }
+
+
