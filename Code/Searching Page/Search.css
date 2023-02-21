@@ -1,0 +1,354 @@
+/* Imported Google Font - Quicksand, link for google fonts site - https://fonts.google.com/specimen/Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* Whole page changers */
+* {
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+
+
+/* Navigation bar styling */
+
+/* Unordered list styling part (selecting menue list part) */
+#navBarLi{
+    padding: 0;
+    margin: 0;
+    background-color: #474747;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+    #navHeader{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 30px, 10%;
+        margin-left: 12%;
+    }
+        
+        #naviNav{
+            width: 56%;
+        }
+
+            .navLinks li{
+                list-style: none;
+                display:inline-flex;
+                padding: 0, 20px;
+            }
+
+            .navLinks li a{
+                transition: all 0.3s ease 0s;
+                text-decoration: none;
+                color: #fff;
+                padding-left: 30px;
+                padding-right: 10px;
+            }
+
+            .navLinks li a:hover{
+                transition: all 0.3s ease 0s;
+                color: rgb(164, 241, 255);
+            }
+
+            .navLinks li a:active{
+                color: blue;
+            }
+
+/* Navigation bar logo */
+#navLogoArea{
+    width: 120px;
+    height: 57px;
+    margin-top: -4%;
+    background-color: rgb(0, 117, 251);
+    margin-right: auto;
+}
+
+    .webLogo{
+    cursor: pointer;
+    width: 100px;
+    }
+
+
+
+
+
+
+
+/* Searching Page Styling */
+    .search_Window {
+        color: #fff;
+        background-color: blanchedalmond;
+        width: 100vw;
+        height: 98vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .searchArea {
+            width: 80vw;
+            height: 40vh;
+        }
+
+            .titleSr {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* background-color: blueviolet; */
+            }
+
+                .titleSr span {
+                    font-size: 30px;
+                    margin: 0 0 20px;
+                }
+
+                .titleSr header {
+                    font-size: 54px;
+                    letter-spacing: 2px;
+                    margin: 0 0 40px 0;
+                }
+
+            .searchContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+                #srchName {
+                    border: none;
+                    outline: none;
+                    border-radius: 35px;
+                    height: 50px;
+                    width: 50vw;
+                    padding: 0 0 0 50px;
+                    font-size: 16px;
+                    color: #000;
+                }
+
+                .searchBox i {
+                    position: relative;
+                    left: -49vw;
+                    top: 6px;
+                    color: #000;
+                }
+
+                    #srchName:hover {
+                        box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.3);
+                        transition: 0.3s;
+                    }
+
+                        ::-webkit-input-placeholder{
+                            font-size: 16px;
+                        }
+
+                #selectOP {
+                    border: none;
+                    outline: none;
+                    border-radius: 35px;
+                    font-size: 16px;
+                    height: 50px;
+                    width: 13vw;
+                    background: rgba(255, 255, 255, 0.7);
+                    transition: 0.3s;
+                    cursor: pointer;
+                }
+
+                    #selectOP:hover {
+                        box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.3);
+                        transition: 0.3s;
+                    }
+
+                #btnSearch {
+                    border: none;
+                    outline: none;
+                    border-radius: 30px;
+                    font-size: 16px;
+                    height: 50px;
+                    width: 12vw;
+                    background: rgba(0, 106, 255, 0.7);
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                    #btnSearch:hover {
+                        box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.3);
+                        transition: 0.3s;
+                    }
+
+                        .srchSubmit [type="submit"] {
+                            color: #fff;
+                        }
+
+
+
+
+/* Footer Styling */
+
+.footerArea {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color: #474747;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0 0;
+    padding: 30px 2% 30px 2%;
+}
+
+    .ftColumn {
+        align-items: center;
+        justify-items: center;
+        width: 20%;
+    }
+
+        #c1 a:hover {
+            transform: scale(115%);
+            transition: 0.4s;
+        }
+
+    #c2 {
+        width: 30%;
+    }
+
+        .ftColumn div {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ftColumn header {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        #c2 header {
+            margin-bottom: -10px;
+            font-size: 17px;
+        }
+
+            .ftColumn a {
+                font-size: 13px;
+                margin-bottom: 10px;
+                text-decoration: none;
+                color: #fff;
+            }
+
+        .ftColumn span{
+            display: flex;
+            justify-content: center;
+            font-size: small;
+            margin-bottom: 10px;
+        }
+
+            #ftInput {
+                height: 40px;
+                width: 100%;
+                margin: 20px 0;
+                border: none;
+                outline: none;
+                border-radius: 35px;
+                padding: 0 0 0 45px;
+                /* background: rgba(255, 255, 255, 0.3); */
+            }
+
+                ::-webkit-input-placeholder {
+                    color: black;
+                }
+
+                #ft_fa_mail {
+                    position: relative;
+                    top: 28px;
+                    left: -91%;
+                    color: rgba(103, 101, 101, 0.5);
+                    
+                }
+
+            #ftSubmit {
+                border: none;
+                outline: none;
+                border-radius: 30px;
+                font-size: 16px;
+                height: 45px;
+                width: 40%;
+                background: rgba(255, 255, 255, .9);
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+                .ftSubmit [type="submit"] {
+                    color: black;
+                }
+
+                #ftSubmit:hover {
+                    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.3);
+                    transform: scale(110%);
+                    background-color: rgba(193, 255, 70, 0.782);
+                    transition: 0.4s;
+                }
+
+        #c3 {
+            flex-direction: column;
+        }
+
+        .cIn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+            .cIn div {
+                margin-bottom: 5px;
+                font-size: 13px;
+            }
+
+        .icon_links {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+            .addFT{
+                margin: 0 0 0 0;
+                padding: 5px 0 5px 0;
+                width: 40%;
+                display: flex;
+            }
+
+                .iconIns {
+                    width: 110%;
+                }
+
+                    .fa {
+                        transform: scale(135%);
+                    }
+
+                .iconIns a:hover {
+                    transform: scale(150%);
+                    transition: 0.3s;
+                }
+
+
+                
+        
+
