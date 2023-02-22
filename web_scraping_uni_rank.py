@@ -19,14 +19,21 @@ print(soup.title.name)
 print(soup.title.parent.name)
 
 # Find the HTML element with class name "row ind "
-university_blocks = soup.find_all('div', class_="row")
+# university_blocks = soup.find_all('div', class_="row ind ")
+# ranking_data = soup.find('div', class_='ranking-data-load')
+# print(ranking_data)
 
 # for university_block in university_blocks:
 #     print(university_block)
 
+# print(university_blocks)
+
+# Navigate to the specific tag using CSS selectors
+ranking_data = soup.select_one('div.content > div.tab-content > div.ranking-tab > div.ranking-data-load')
+
+university_blocks = ranking_data.find_all('div', class_="row ind ")
+
 print(university_blocks)
-
-
 
 # Extract the information for each university
 for block in university_blocks:
@@ -39,3 +46,4 @@ for block in university_blocks:
     print("Location:", location)
     print("World Rank:", world_rank)
     print("---")
+
