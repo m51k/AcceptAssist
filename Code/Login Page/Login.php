@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="input_field">
-                        <input type="password" name="password" class="input" placeholder="Password" required>
+                        <input type="password" name="password" class="input" placeholder="Password" autocomplete="off" required>
                         <i class="material-symbols-outlined">key</i>
 
                     </div>
