@@ -39,13 +39,60 @@
 
     <div id="RegisterPage">       <!-- Backgroung Picture in this div-->
         <div id="RegisterBox">     <!-- Login box area -->
+
+        <!-- PHP code - take details in register page and save to database. -->
+            <?php 
+
+                include("PHP/config.php");
+                if(isset($_POST['submit'])){
+                     $fullName = $_POST['fullname'];
+                     $username = $_POST['username'];
+                     $email = $_POST['email'];
+                     $phoneNo = $_POST['phoneNo'];
+                     $country = $_POST['country'];
+                     $password = $_POST['password'];
+
+                     // verifing the email and username if already exsist
+
+                     $verify_email = mysqli_query($con,"SELECT DB_Email FROM User_DB WHERE DB_Email='$email'");
+                     $verify_username = mysqli_query($con,"SELECT DB_Username FROM User_DB WHERE DB_Username='$username'");
+
+                     if(mysqli_num_rows($verify_email) != 0){
+                        echo "<div class='phpMessage'>
+                                  <p>Given email already in use, Try another One Please!</p>
+                              </div> <br>";
+                        echo "<a href='javascript:self.history.back()'><button class='phpBtn'>Go Back</button>";
+                     }
+
+                        elseif(mysqli_num_rows($verify_username) != 0){
+                        echo "<div class='phpMessage'>
+                                  <p>Given Username already in use, Try another One Please!</p>
+                              </div> <br>";
+                        echo "<a href='javascript:self.history.back()'><button class='phpBtn'>Go Back</button>";
+                        }
+
+                            else{
+                                mysqli_query($con,"INSERT INTO User_DB(DB_Username, DB_Name, DB_Email, DB_PhoneNo, DB_Country, Password) VALUES('$username','$fullName','$email','$phoneNo','$country','$password')") or die("Error Occurred");
+
+                                echo "<div class='phpMessage'>
+                                        <p>Successfully Registered!</p>
+                                      </div> <br>";
+                                echo "<a href='./Login.php'><button class='phpBtn'>Login Now</button>";
+                   
+                            }
+                        
+                } else {
+            
+            ?>
+
+            <!-- Register page HTML part -->
             <div class="container">
                 <div class="top_header">
                     <span>Don't have an Account? Let's create new account...</span>
                     <header>Register</header>
                 </div>
 
-                <form action="/Code/Register Page/Register.html">       <!-- Add action here -->
+                <form action="" method="post">       <!-- Add action here -->
                     <div class="input_field">
                         <input type="text" name="fullname" class="input" placeholder="Full Name - Required" required>
                         <i class="material-symbols-outlined">badge</i>
@@ -92,12 +139,13 @@
 
                     <div class="bottom">
                         <div class="signin">
-                            <label> Already have an account? <a href="/Code/Login Page/Login.html">Sign in</a></label>
+                            <label> Already have an account? <a href="./Login.php">Sign in</a></label>
                         </div>
                     </div>
     
                 </form>
             </div>
+            <?php } ?>
         </div>
     </div>
 
