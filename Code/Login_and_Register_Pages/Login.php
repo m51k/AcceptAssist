@@ -1,3 +1,7 @@
+<?php 
+    session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,9 +44,44 @@
                     <header>Login</header>
                 </div>
 
-                <form action="/Code/Register Page/Register.html">       <!-- Add action here -->
+                <!-- PHP Code For login user -->
+                <?php 
+                    include("./PHP/config.php");
+                    if(isset($_POST['submit'])){
+                        $username = mysqli_real_escape_string($con,$_POST['username']);
+                        $password = mysqli_real_escape_string($con,$_POST['password']);  
+                        
+                        $result = mysqli_query($con,"SELECT * FROM User_DB WHERE DB_Username LIKE '$email' AND Password LIKE '$password' ") or die("Select Error");
+                        $row = mysqli_fetch_assoc($result);
+        
+                        if(is_array($row) && !empty($row)){
+                            $_SESSION['valid'] = $row['DB_Username'];
+                            $_SESSION['fullName'] = $row['DB_Name'];
+                            $_SESSION['email'] = $row['DB_Email'];
+                            $_SESSION['phoneNo'] = $row['DB_PhoneNo'];
+                            $_SESSION['country'] = $row['DB_Country'];
+                            $_SESSION['id'] = $row['ID'];
+                        }else{
+                            echo "<div class='message'>
+                                    <p>Wrong Username or Password</p>
+                                    </div> <br>";
+
+                            echo "<a href='index.php'><button class='btn'>Go Back</button>";
+                 
+                        }
+
+                        if(isset($_SESSION['valid'])){
+                            header("Location: google.com"); // Add homepage here
+                        }
+                      }else
+                      
+                      {
+
+                ?>
+
+                <form action="" method="post">       <!-- Add action here -->
                     <div class="input_field">
-                        <input type="text" name="username" class="input" placeholder="Username" required>
+                        <input type="text" name="username" class="input" placeholder="Username" id="username" required>
                         <i class="material-symbols-outlined">person</i>
                     </div>
 
@@ -64,9 +103,11 @@
 
                 <div class="bottom">
                     <div class="register">
-                        <label> Don't have an account? <a href="/Code/Register Page/Register.html">Sign Up</a></label>
+                        <label> Don't have an account? <a href="./Register.php">Sign Up</a></label>
                     </div>
                 </div>
+
+                <?php } ?>
 
             </div>
         </div>
