@@ -26,7 +26,7 @@
                         <li><a href="#">Explore</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="./PHP/logout.php">Logout</a></li>
                     </ul>
                 </nav>
             </header>
@@ -52,7 +52,7 @@
                     $username = mysqli_real_escape_string($con,$_POST['username']);
                     $password = mysqli_real_escape_string($con,$_POST['password']);
 
-                    $result = mysqli_query($con,"SELECT * FROM users WHERE Username='$username' AND Password='$password' ") or die("Select Error");
+                    $result = mysqli_query($con,"SELECT * FROM Users WHERE Username='$username' AND Password='$password' ") or die("Select Error");
                     $row = mysqli_fetch_assoc($result);
 
                     if(is_array($row) && !empty($row)){
