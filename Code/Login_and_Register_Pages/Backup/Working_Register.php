@@ -56,14 +56,23 @@
 
                     //verifying the unique email
 
-                    $verify_query = mysqli_query($con,"SELECT Email FROM Users WHERE Email='$email'");
+                    $verify_query = mysqli_query($con,"SELECT Username FROM Users WHERE Username='$username'");
 
                     if(mysqli_num_rows($verify_query) !=0 ){
                         echo "<div class='message'>
-                                <p>This email is used, Try another One Please!</p>
+                                <p>This Username is used, Try another One Please!</p>
                             </div> <br>";
                         echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button>";
                     }
+
+                    elseif ($password != $rePassword) {
+                        echo "<div class='message'>
+                                <p>Password and Confirmed Password doesn't Matched</p><br>
+                                <p>Please Try Again</p>
+                            </div> <br>";
+                    echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button>";
+                    }
+
                     else{
 
                         mysqli_query($con,"INSERT INTO Users(FullName,Username,Email,MobileNumber,Country,Password) VALUES('$name','$username','$email','$phoneNo','$country','$password')") or die("Erroe Occured");
