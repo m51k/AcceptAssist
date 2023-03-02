@@ -1,5 +1,5 @@
 <?php 
 
-    $con = mysqli_connect("localhost","root","","AcceptAssist_DB") or die("Couldn't Connect");
+    $con = mysqli_connect("localhost","root","","AcceptAssistDatabase") or die("Couldn't Connect");
 
 ?>
