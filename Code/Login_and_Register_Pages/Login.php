@@ -26,7 +26,7 @@
                         <li><a href="#">Explore</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="./PHP/logout.php">Logout</a></li>
                     </ul>
                 </nav>
             </header>
@@ -46,60 +46,60 @@
 
                 <!-- PHP Code For login user -->
                 <?php 
-                    include("./PHP/config.php");
-                    if(isset($_POST['submit'])){
-                        $username = mysqli_real_escape_string($con,$_POST['username']);
-                        $password = mysqli_real_escape_string($con,$_POST['password']);  
-                        
-                        $result = mysqli_query($con,"SELECT * FROM User_DB WHERE DB_Username LIKE '$email' AND Password LIKE '$password' ") or die("Select Error");
-                        $row = mysqli_fetch_assoc($result);
-        
-                        if(is_array($row) && !empty($row)){
-                            $_SESSION['valid'] = $row['DB_Username'];
-                            $_SESSION['fullName'] = $row['DB_Name'];
-                            $_SESSION['email'] = $row['DB_Email'];
-                            $_SESSION['phoneNo'] = $row['DB_PhoneNo'];
-                            $_SESSION['country'] = $row['DB_Country'];
-                            $_SESSION['id'] = $row['ID'];
-                        }else{
-                            echo "<div class='message'>
-                                    <p>Wrong Username or Password</p>
-                                    </div> <br>";
+                
+                include("php/config.php");
+                if(isset($_POST['submit'])){
+                    $username = mysqli_real_escape_string($con,$_POST['username']);
+                    $password = mysqli_real_escape_string($con,$_POST['password']);
 
-                            echo "<a href='index.php'><button class='btn'>Go Back</button>";
-                 
-                        }
+                    $result = mysqli_query($con,"SELECT * FROM Users WHERE Username='$username' AND Password='$password' ") or die("Select Error");
+                    $row = mysqli_fetch_assoc($result);
 
-                        if(isset($_SESSION['valid'])){
-                            header("Location: google.com"); // Add homepage here
-                        }
-                      }else
-                      
-                      {
+                    if(is_array($row) && !empty($row)){
+                        $_SESSION['valid'] = $row['Username'];
+                        $_SESSION['email'] = $row['Email'];
+                        $_SESSION['fullName'] = $row['FullName'];
+                        $_SESSION['mobileNo'] = $row['MobileNumber'];
+                        $_SESSION['country'] = $row['Country'];
+                        $_SESSION['id'] = $row['ID'];
+                    }else{
+                        echo "<div class='message'>
+                        <p>Wrong Username or Password</p>
+                        </div> <br>";
+                    echo "<a href='Login.php'><button class='btn'>Go Back</button>";
+            
+                    }
+                    if(isset($_SESSION['valid'])){
+                        header("Location: home.php");
+                    }
 
+                }else{
+
+                
                 ?>
-
-                <form action="" method="post">       <!-- Add action here -->
+                
+                <form action="" method="post">
                     <div class="input_field">
-                        <input type="text" name="username" class="input" placeholder="Username" id="username" required>
+                        <input type="text" name="username" id="username" autocomplete="off" placeholder="Username" class="input" required>
                         <i class="material-symbols-outlined">person</i>
                     </div>
 
                     <div class="input_field">
-                        <input type="password" name="password" class="input" placeholder="Password" autocomplete="off" required>
+                        <input type="password" name="password" id="password" autocomplete="off" placeholder="Password" minlength="8" class="input" required>
                         <i class="material-symbols-outlined">key</i>
-
                     </div>
-                    
+
                     <div class="TnC">
                         <input type="checkbox" name="check" id="check" required>
                         <label for="check"> I have read and agree with <a href="">terms & coditions</a></label>  <!-- Add terms and conditions -->
                     </div>
 
                     <div class="input_field">
-                            <input type="submit" value="Login" class="submit">
+                        <input type="submit" class="submit" name="submit" value="Login" required>
                     </div>
                 </form>
+
+                <!-- If bottom div needed to show in the user not found message add " php } " here -->
 
                 <div class="bottom">
                     <div class="register">
@@ -107,9 +107,10 @@
                     </div>
                 </div>
 
-                <?php } ?>
-
             </div>
+
+            <?php } ?>
+            
         </div>
     </div>
 
