@@ -1,102 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<title>
-   Home Page
-</title>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Navi</title>
-    <link rel="stylesheet" href="./home.css">
-
-</head>
-<body background="/Users/shanmugaratnammohanaranjan/Documents/GitHub/AcceptAssist/Code/Home Page/Resources/university-westminster_web.jpg">
-
-    <div id="navBar" style="position: fixed; width: 100vw;">
-        <div id="navBarLi">
-            <header id="navHeader">
-                <nav id="naviNav">
-                    <ul class="navLinks">
-                        <li><a href="/Users/shanmugaratnammohanaranjan/Documents/GitHub/AcceptAssist/Code/Home Page/Home.html">Home</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">Explore</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="/Users/shanmugaratnammohanaranjan/Documents/GitHub/AcceptAssist/Code/About Us Page/AboutUs.html">About Us</a></li>
-                        <li><a href="/Users/shanmugaratnammohanaranjan/Documents/GitHub/AcceptAssist/Code/User Page/User.html">User </a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-        <div id="navLogoArea">
-            <img class="webLogo" src="./Resources/westminster-img.png" alt="Web page logo">
-        </div>
-    </div>
+<html>
+  <head>
+    <title>My Website</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Accepta assist </h1>
+    </header>
+    <nav>
+        <div class="naviBar">
+            <div class="container">
+                <div class="logo">
     
-    <div class="footerArea">
-        <div class="ftColumn" id="c1">
-            <header>USEFUL LINKS</header>
-
-            <div><a href="#">Home</a></div>                <!-- Add Link Here-->
-            <div><a href="#">Resoucers</a></div>           <!-- Add Link Here-->
-            <div><a href="#">About</a></div>               <!-- Add Link Here-->
-            <div><a href="#">Contact</a></div>             <!-- Add Link Here-->
-        </div>
-
-        <div class="ftColumn" id="c2">
-            <span>Get Late's news...</span>
-            <header>NEWSLETTER</header>
-
-            <form action="#">
-                <div class="ftInput">
-                    <input type="email" name="ftEmail" id="ftInput" placeholder="Enter Your Email Here">
-                    <i class="material-symbols-outlined" id="ft_fa_mail"> mail </i>
                 </div>
-                <div class="ftSubmit">
-                    <input type="submit" value="Subscribe Now" id="ftSubmit">
-                </div>
-            </form>
-        </div>
-
-        <div class="ftColumn" id="c3">
-            <header>CONTACT</header>
-
-            <div class="cIn">
-                <div>Team Backout,</div> 
-                <div>No.10, Trelawney Place, </div>
-                <div>Colombo 04, </div>
-                <div>Sri Lanka. </div>
-            </div>
-
-            <div class ="icon_links">
-                <div class="addFT">
-                    <div class="iconIns">
-                        <a href="#">                <!-- Add instagram Link Here-->
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </div>
-
-                    <div class="iconIns">
-                        <a href="#">                <!-- Add facebook Link Here-->
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </div>
-
-                    <div class="iconIns">
-                        <a href="#">                <!-- Add Twitter Link Here-->
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
+    
+                <div class="listMenu">
+                    <div class="menuItem"><a href="#">Home</a></div>
+                    <div class="menuItem" class="dropdown">
+                        <button class="dropbtn">Resources 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <div class="dropdownItem"><a href="#">Get Prediction</a></div>
+                          <div class="dropdownItem"><a href="#">Search Universities</a></div>
+                        </div>
+                      </div> 
+                    <div class="menuItem"><a href="#">About</a></div>
+                    <div class="menuItem"><a href="#">Contact</a></div>
+                    <div class="menuItem"><a href="/Code/Login_and_Register_Pages/PHP/logout.php">Logout</a></div>
+                    <div class="menuItem"><a href="/Code/Login_and_Register_Pages/home.php"><i class="material-symbols-outlined">account_circle</i></a></div>
                 </div>
             </div>
-
         </div>
-
-    </div>
-</footer>
-
-<!-- to hear -->
-</body>
+    </nav>
+    <main>
+      <section>
+        <h2>About Us</h2>
+        <p>We are a predict the unversity acceptance</p>
+      </section>
+      <section>
+        <h2>Contact Us</h2>
+        <p>You can reach us at:</p>
+        <ul>
+          <li>Email: </li>
+          <li>Phone: </li>
+          <li>Address: </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; All rights reserved.</p>
+    </footer>
+  </body>
 </html>

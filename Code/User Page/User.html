@@ -1,37 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Navi</title>
-
-    <link rel="stylesheet" href="./User.css">
+	<title>User Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body background="/Users/shanmugaratnammohanaranjan/Documents/GitHub/AcceptAssist/Code/User Page/Resources/university-westminster_web.jpg">
-    <div id="navBar" style="position: fixed; width: 100vw;">
-        <div id="navBarLi">
-            <header id="navHeader">
-                <nav id="naviNav">
-                    <ul class="navLinks">
-                        <li><a href="/Users/shanmugaratnammohanaranjan/Documents/GitHub/AcceptAssist/Code/Home Page/Home.html">Home</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">Explore</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="/Users/shanmugaratnammohanaranjan/Documents/GitHub/AcceptAssist/Code/About Us Page/AboutUs.html">About Us</a></li>
-                        <li><a href="/Users/shanmugaratnammohanaranjan/Documents/GitHub/AcceptAssist/Code/User Page/User.html"> User </a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-
-        <div id="navLogoArea">
-            <img class="webLogo" src="./Resources/westminster-img.png" alt="Web page logo">
-        </div>
-
-    </div>
-    
-    Ready to Work on Home page
+<body>
+	<header>
+		<h1>User Name</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Profile</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="profile-info">
+			<h2>Profile Information</h2>
+			<img src="" alt="">
+			<p>Name: </p>
+			<p>Email: </p>
+			<p>Location: </p>
+			<p>Bio: </p>
+		</section>
+		<section id="activity-feed">
+			<h2>Activity Feed</h2>
+			<ul>
+				<li><a href="#"> Input scored</a></li>
+				<li><a href="#"> Contact deatils</a></li>
+				<li><a href="#"> Input photo</a></li>
+			</ul>
+		</section>
+		<section id="personalized-content">
+			<h2>Personalized Content</h2>
+			<p>Here is some Universities that is personalized for you based on your interests and activity:</p>
+			<ul>
+				<li><a href="#">Recommended Universities</a></li>
+				<li><a href="#">Top-rated Univrersities </a></li>
+				<li><a href="#">Trending Universities </a></li>
+			</ul>
+		</section>
+		<section id="messaging">
+			<h2>Messaging</h2>
+			<p>Send a message to another user:</p>
+			<form>
+				<label for="recipient">Recipient:</label>
+				<input type="text" id="recipient" name="recipient"><br><br>
+				<label for="message">Message:</label>
+				<textarea id="message" name="message"></textarea><br><br>
+				<input type="submit" value="Send">
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 User Page</p>
+	</footer>
 </body>
 </html>
