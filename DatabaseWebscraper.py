@@ -1,18 +1,17 @@
 import requests
 from bs4 import BeautifulSoup as Soup
 import mysql.connector
-
-url = "https://www.topuniversities.com/sites/default/files/qs-rankings-data/en/3816281_indicators.txt?rr7ebw"
-
-page = requests.get(url)
     
-def getUniData(webpage):
+def getUniData():
+    url = "https://www.topuniversities.com/sites/default/files/qs-rankings-data/en/3816281_indicators.txt?rr7ebw"
+    page = requests.get(url)
+    
     uniNames = []
     uniRanks = []
     uniRatings = []
     uniLocations = []
     
-    for uni in webpage.json()["data"]:
+    for uni in page.json()["data"]:
         name = Soup(uni["uni"], "html.parser").select_one(".uni-link").get_text(strip=True)
         uniNames.append(name)
         rank = uni["overall_rank"]
@@ -29,7 +28,7 @@ def populateTable(uniName, uniRank, uniRating, uniLocation):
     values = (uniName, uniRank, uniRating, uniLocation)
     return insert_query, values
 
-names, ranks, ratings, locations = getUniData(page)
+names, ranks, ratings, locations = getUniData()
 
 conn = mysql.connector.connect(
     host = "localhost",
@@ -38,7 +37,6 @@ conn = mysql.connector.connect(
 )
 
 cursor = conn.cursor()
-query, values = populateTable(names[0], ranks[0], ratings[0], locations[0])     # this is a test
 createTableQuery = """
 CREATE TABLE university_rankings (
     Name varchar(255) NOT NULL,
@@ -48,7 +46,10 @@ CREATE TABLE university_rankings (
 )
 """
 cursor.execute(createTableQuery)
-cursor.execute(query, values)
+
+for uniName, uniRank, uniRating, uniLocation in zip(names, ranks, ratings, locations):
+    query, values = populateTable(uniName, uniRank, uniRating, uniLocation)
+    cursor.execute(query, values)
 
 # commit changes into the database
 conn.commit()
