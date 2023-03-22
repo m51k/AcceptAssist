@@ -1,0 +1,155 @@
+/* Imported Google Font - Quicksand, link for google fonts site - https://fonts.google.com/specimen/Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* Whole page changers */
+* {
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    margin: 0 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+.homePageContent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .container{
+        width: 85vw;
+        height: 90vh;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row;
+    }
+
+        .leftPart{
+            height:inherit;
+            width: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* border-style: solid;
+            border-color: red; */
+        }
+
+            .profile{
+                width: 90%;
+                height: 94%;
+                background-color: white;
+                border-radius: 30px;
+                box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+                
+            }
+
+                .dp{
+                    width: 100%;
+                    height: 50%;
+                    background-color: aqua;
+                }
+
+                .data{
+                    width: 100%;
+                    height: 50%;
+                    background-color:blue;
+                }
+
+
+        .rightPart{
+            height: inherit;
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .topPart{
+                height: 20%;
+                width: 100%;
+                display: flex;
+                align-items:flex-end;
+                /* justify-content: center; */
+/* 
+                border-style: solid;
+                border-color: red; */
+            }
+
+                .summary{
+                    width: 97%;
+                    height: 85%;
+                    background-color: white;
+                    border-radius: 30px;
+                    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+                }
+
+            .bottomPart{
+                height: 80%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                /* justify-content: center; */
+
+                /* border-style: solid;
+                border-color: red; */
+            }
+
+                .history{
+                    width: 97%;
+                    height: 94%;
+                    background-color: white;
+                    border-radius: 30px;
+                    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px 0 20px 0;
+                }
+
+                    .discrip{
+                        height: 13%;
+                        width: 95%;
+                        /* background-color: blueviolet; */
+                    }
+
+                    .listHistory{
+                        height: 85%;
+                        width: 95%;
+                        /* background-color: violet; */
+                        border-radius: 20px;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border: 10px 0 10px 0;
+                    }
+
+                        .singleHistoryContent{
+                            height: 102px;
+                            width: 100%;
+                            /* background-color: yellowgreen; */
+                            border-radius: 20px;   
+                            display: flex;
+                            justify-content: center;
+                            align-items:flex-end;
+                        }
+
+                            .historyData{
+                                height: 90px;
+                                width: 98%;
+                                background-color: rgba(159, 159, 159, 0.5);
+                                border-radius: 20px;
+                                z-index: 1;
+                            }
