@@ -168,6 +168,10 @@
                         padding-left: 30px;
                     }
 
+                        .sumDiscrip {
+                            font-size: 12px;
+                        }
+
             .bottomPart{
                 height: 80%;
                 width: 100%;
@@ -208,7 +212,7 @@
                         border-radius: 20px;
                         overflow-x: hidden;
                         overflow-y: auto;
-                        display: flex;
+                        display:block;
                         flex-direction: column;
                         align-items: center;
                         border: 10px 0 10px 0;
@@ -221,7 +225,7 @@
                             border-radius: 20px;   
                             display: flex;
                             justify-content: center;
-                            align-items:flex-end;
+                            align-items: center;
                         }
 
                             .historyData{
@@ -229,5 +233,4 @@
                                 width: 98%;
                                 background-color: rgba(159, 159, 159, 0.5);
                                 border-radius: 20px;
-                                z-index: 1;
                             }
