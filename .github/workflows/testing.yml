@@ -3,9 +3,8 @@ name: Tests
 on:
   push:
     branches:
-      -dev
+      - dev
 
-push[push]
 
 jobs:
   build:
