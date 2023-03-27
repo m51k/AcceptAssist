@@ -9,8 +9,20 @@ from sklearn.model_selection import train_test_split
 
 # Create your views here.
 class PredictAcceptance(APIView):
-    def predictAcceptance(gre, toefl, uniRating, sop, lor, cgpa, research):
-        data = pd.read_csv('../admit.csv')
+    def post(self, request, rating):
+        gre = request.data.get('r_grescore')
+        toefl = request.data.get('r_toeflscore')
+        sop = request.data.get('r_sop')
+        lor = request.data.get('r_lor')
+        cgpa = request.data.get('r_cgpa')
+        research = request.data.get('r_research')
+        
+        prediction = randomForestRegressor(gre, toefl, rating, sop, lor, cgpa, research)
+
+        return prediction
+    
+def randomForestRegressor(gre, toefl, rating, sop, lor, cgpa, research):
+        data = pd.read_csv('../ML/admit.csv')
         X = data.iloc[:, 1:8] # features
         y = data.iloc[:, 8] # target
         
@@ -20,6 +32,6 @@ class PredictAcceptance(APIView):
         
         regressor.fit(X_train, y_train)
         
-        prediction = regressor.predict([[gre, toefl, uniRating, sop, lor, cgpa, research]])
+        prediction = regressor.predict([[gre, toefl, rating, sop, lor, cgpa, research]])
         
         return prediction

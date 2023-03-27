@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from views import PredictAcceptance
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/acceptance-prediction/', PredictAcceptance.as_view(), name='prediction')
 ]
