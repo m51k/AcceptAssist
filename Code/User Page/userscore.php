@@ -12,16 +12,39 @@ include ("Header.html");
 echo "<h4>".$pagename."</h4>";
 //Capture and trim the 7 inputs entered in the the 7 fields of the form using the $_POST superglobal variable
 //Store these details into a set of 7 new local variables
-$fname=trim($_POST['r_grescore']);
-$lname=trim($_POST['r_toeflscore']);
-$address=trim($_POST['r_sop']);
-$postcode=trim($_POST['r_lor']);
-$telno=trim($_POST['r_cgpa']);
 
-;
+function postuserScores($url, $data) {
+    $init = curl_init();
+
+    curl_setopt_array($init, array(
+        CURLOPT_URL => $url,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => $data,
+      ));
+
+      $response = curl_exec($init);
+
+      curl_close($init);
+
+      return $response;
+}
+
+// $greScore=trim($_POST['r_grescore']);
+// $toeflScore=trim($_POST['r_toeflscore']);
+// $sop=trim($_POST['r_sop']);
+// $lor=trim($_POST['r_lor']);
+// $cgpa=trim($_POST['r_cgpa']);
+
+$userScores = array(
+    'r_grescore' => trim($_POST['r_grescore']),
+    'r_toeflscore' => trim($_POST['r_toeflscore']),
+    'r_sop' => trim($_POST['r_sop']),
+    'r_lor' => trim($_POST['r_lor']),
+    'r_cgpa' => trim($_POST['r_cgpa'])
+);
 // GRE Score	TOEFL Score	University Rating	SOP	LOR	CGPA	Research	Chance of Admit
 
-include("Footer.html");
+include("../Navigation Bar & Footer/Footer.html");
 //include head layout
 echo "</body>";
 ?>
