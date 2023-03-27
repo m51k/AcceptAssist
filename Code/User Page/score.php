@@ -24,7 +24,7 @@ echo "<td style='border: 0px'><input type=reset value='Clear Score' name='submit
 echo "</tr>";
 echo "</table>";
 echo "</form>" ;
-include("Footer.html");
+include("../Navigation Bar & Footer/footer.html");
 //include head layout
 echo "</body>";
 ?>
