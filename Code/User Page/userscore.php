@@ -13,7 +13,7 @@ echo "<h4>".$pagename."</h4>";
 //Capture and trim the 7 inputs entered in the the 7 fields of the form using the $_POST superglobal variable
 //Store these details into a set of 7 new local variables
 
-function postuserScores($url, $data) {
+function postUserScores($url, $data) {
     $init = curl_init();
 
     curl_setopt_array($init, array(
