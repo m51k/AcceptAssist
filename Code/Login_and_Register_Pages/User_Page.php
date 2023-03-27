@@ -1,3 +1,12 @@
+<?php 
+   session_start();
+
+   include("php/config.php");
+   if(!isset($_SESSION['valid'])){
+    header("Location: Login.php");
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +16,7 @@
 
         <title>AcceptAssist</title>
 
-        <link rel="stylesheet" href="./User_Page.css">
+        <link rel="stylesheet" href="./Style/User_Page.css">
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,33 +26,24 @@
     <body>
         <div class="page">
 
-            <div class="naviBar">
-                <div class="container">
-                    <div class="logo">
-        
-                    </div>
-        
-                    <div class="listMenu">
-                        <div class="menuItem"><a href="#">Home</a></div>
-                        <div class="menuItem" class="dropdown">
-                            <button class="dropbtn">Resources 
-                              <i class="fa fa-caret-down"></i>
-                            </button>
-                            <!-- <div class="dropdown-content">
-                              <div class="dropdownItem"><a href="#">Get Prediction</a></div>
-                              <div class="dropdownItem"><a href="#">Search Universities</a></div>
-                            </div> -->
-                          </div> 
-                        <div class="menuItem"><a href="#">About</a></div>
-                        <div class="menuItem"><a href="#">Contact</a></div>
-                        <div class="menuItem"><a href="/Code/Login_and_Register_Pages/PHP/logout.php">Logout</a></div>
-                        <div class="menuItem"><a href="/Code/Login_and_Register_Pages/home.php"><i class="material-symbols-outlined">account_circle</i></a></div>
-                    </div>
-                </div>
-            </div>
-
 
             <div class="homePageContent">
+
+                <?php 
+                    
+                    $id = $_SESSION['id'];
+                    $query = mysqli_query($con,"SELECT*FROM users WHERE Id=$id");
+
+                    while($result = mysqli_fetch_assoc($query)){
+                        $res_Username = $result['Username'];
+                        $res_Email = $result['Email'];
+                        $res_fullName = $result['FullName'];
+                        $res_mobileNo = $result['MobileNumber'];
+                        $res_country = $result['Country'];
+                        $res_id = $result['ID'];
+                    }
+                    
+                ?>
 
                 <div class="container">
 
@@ -60,25 +60,25 @@
                             <div class="data">
                                 <div class="singleData">
                                     <div class="icon"><span class="material-symbols-outlined">badge</span></div>
-                                    : Pasan Diksura
+                                    : <b><?php echo $res_fullName ?></b>
                                 </div>
                                 <div class="singleData">
                                     <div class="icon"><span class="material-symbols-outlined">email</span></div>
-                                    : pasanDiksura@gmail.com
+                                    : <b><?php echo $res_Email ?></b>
                                 </div>
                                 
                                 <div class="singleData">
                                     <div class="icon"><span class="material-symbols-outlined">call</span></div>
-                                    : 0764345345
+                                    : <b><?php echo $res_mobileNo ?></b>
                                 </div>
 
                                 <div class="singleData">
                                     <div class="icon"><span class="material-symbols-outlined">public</span></div>
-                                    : Sri Lanka
+                                    : <b><?php echo $res_country ?></b>
                                 </div>
 
                                 <div class="singleData" id="lgoutBtn">
-                                    <div class="logoutBtn"><a href="#">Logout</a></div>
+                                    <div class="logoutBtn"><a href="php/logout.php">Logout</a></div>
                                 </div>
                             </div>
 
@@ -93,8 +93,7 @@
                             <div class="summary">
                                 <div class="contentSum">
                                     <h1>
-                                        <p>Hello Pasan
-                                            <!-- <b><?php echo $res_Username ?></b> -->
+                                        <p>Hello <b><?php echo $res_Username ?></b>
                                         </p>
                                     </h1>
                                     <p class="sumDiscrip">We provide your university admission predictions based on based on GRE Score, TOEFL Score and CGPA</p>
