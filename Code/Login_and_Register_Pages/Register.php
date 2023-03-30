@@ -9,6 +9,7 @@
 </head>
 
 <body style="background-image: url(./Resources/university-westminster_web.jpg); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+
     <div id="navBar" style="position: fixed; width: 100vw; margin-top: -9.3%;">
         <div id="navBarLi">
             <header id="navHeader">
