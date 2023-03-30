@@ -16,10 +16,6 @@
   'opsz' 48
 }
 
-body{
-    background-color: gray;
-}
-
 /* Navigation bar styling */
 
 .naviBar{
@@ -142,7 +138,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(./Resources/UserPage.png);
+    background-image: url(/Code/Login_and_Register_Pages/Resources/UserPage.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
