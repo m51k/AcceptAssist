@@ -24,6 +24,32 @@
 
 
     <body>
+
+        <div class="naviBar">
+            <div class="naviContainer">
+                <div class="naviLogo">
+
+                </div>
+
+                <div class="naviListMenu">
+                    <div class="naviMenuItem"><a href="#">Home</a></div>
+                    <div class="naviMenuItem" class="naviDropdown">
+                        <button class="naviDropbtn">Resources 
+                        <i class="fa fa-caret-down"></i>
+                        </button>
+                        <!-- <div class="dropdown-content">
+                        <div class="dropdownItem"><a href="#">Get Prediction</a></div>
+                        <div class="dropdownItem"><a href="#">Search Universities</a></div>
+                        </div> -->
+                    </div> 
+                    <div class="naviMenuItem"><a href="#">About</a></div>
+                    <div class="naviMenuItem"><a href="#">Contact</a></div>
+                    <div class="naviMenuItem"><a href="/Code/Login_and_Register_Pages/PHP/logout.php">Logout</a></div>
+                    <div class="naviMenuItem"><a href="/Code/Login_and_Register_Pages/home.php"><i class="material-symbols-outlined">account_circle</i></a></div>
+                </div>
+            </div>
+        </div>
+
         <div class="page">
 
 

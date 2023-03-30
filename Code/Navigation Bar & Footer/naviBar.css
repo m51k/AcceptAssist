@@ -34,18 +34,18 @@ body{
     font-size: 18px;
 }
 
-   .container{
+   .naviContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
    }
    
-    .logo{
+    .naviLogo{
         width: 120px;
         height: 57px;
     }
 
-    .listMenu{
+    .naviListMenu{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -54,27 +54,27 @@ body{
         padding-right: 25px;
     }
 
-        .menuItem .material-symbols-outlined{
+        .naviMenuItem .material-symbols-outlined{
             scale: 130%;
             padding-top: 5px;
         }
 
-        .menuItem a:hover {
+        .naviMenuItem a:hover {
             color: blue;
             font-size: 19px;
             transition: all 0.5s ease 0s;
         }
 
-        .menuItem i:hover{
+        .naviMenuItem i:hover{
             transform: scale(125%);
             transition: all 0.2s ease 0s;
         }
 
-        .dropdown{
+        .naviDropdown{
             overflow: hidden;
         }
 
-            .dropbtn{
+            .naviDropbtn{
                 height: 57px;
                 font-size: 18px;
                 color: #fff;
@@ -85,7 +85,7 @@ body{
                 padding: 0 0 0 0;
             }
 
-            .dropbtn:hover {
+            .naviDropbtn:hover {
                 color: blue;
                 font-size: 19px;
                 transition: all 0.5s ease 0s;
