@@ -58,32 +58,32 @@
 
                     $verify_query = mysqli_query($con,"SELECT Username FROM Users WHERE Username='$username'");
 
-                    if(mysqli_num_rows($verify_query) !=0 ){
-                        echo "<div class='message'>
-                                <p>This Username is used, Try another One Please!</p>
-                            </div> <br>";
+                        if(mysqli_num_rows($verify_query) !=0 ){
+                            echo "<div class='message'>
+                                    <p>This Username is used, Try another One Please!</p>
+                                </div> <br>";
+                            echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button>";
+                        }
+
+                        elseif ($password != $rePassword) {
+                            echo "<div class='message'>
+                                    <p>Password and Confirmed Password doesn't Matched</p><br>
+                                    <p>Please Try Again</p>
+                                </div> <br>";
                         echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button>";
-                    }
+                        }
 
-                    elseif ($password != $rePassword) {
-                        echo "<div class='message'>
-                                <p>Password and Confirmed Password doesn't Matched</p><br>
-                                <p>Please Try Again</p>
-                            </div> <br>";
-                    echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button>";
-                    }
+                        else{
 
-                    else{
+                            mysqli_query($con,"INSERT INTO Users(FullName,Username,Email,MobileNumber,Country,Password) VALUES('$name','$username','$email','$phoneNo','$country','$password')") or die("Erroe Occured");
 
-                        mysqli_query($con,"INSERT INTO Users(FullName,Username,Email,MobileNumber,Country,Password) VALUES('$name','$username','$email','$phoneNo','$country','$password')") or die("Erroe Occured");
+                            echo "<div class='message'>
+                                    <p>Registration successfully!</p>
+                                </div> <br>";
+                            echo "<a href='Login.php'><button class='btn'>Login Now</button>";
+                        
 
-                        echo "<div class='message'>
-                                <p>Registration successfully!</p>
-                            </div> <br>";
-                        echo "<a href='Login.php'><button class='btn'>Login Now</button>";
-                    
-
-                    }
+                        }
 
                     }else{
                     
