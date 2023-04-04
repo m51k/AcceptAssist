@@ -63,7 +63,8 @@
                         `MobileNumber` int(11) DEFAULT NULL,
                         `Country` varchar(60) DEFAULT NULL,
                         `Password` varchar(150) NOT NULL
-                      )";
+                    )";
+                    mysqli_query($conn, $createTableQuery);
 
                     //verifying the unique email
 
