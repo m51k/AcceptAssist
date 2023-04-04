@@ -1,120 +1,312 @@
-/* set the background color of the page */
-body {
-    background-color: #2352af;
-  }
-  
-  /* style the header */
-  header {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 20px;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  /* style the main content */
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    color: #c33737;
-  }
-  
-  /* style the team member profiles */
-  .team-member {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .team-member img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-  }
-  
-  .team-member h3 {
-    margin: 0;
-  }
-  
-  /* style the footer */
-  footer {
-    background-color: #e13c3c;
-    color: #ffffff;
-    padding: 10px;
-    text-align: center;
-  }
+/* Imported Google Font - Quicksand, link for google fonts site - https://fonts.google.com/specimen/Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-  #contact-form {
+/* Whole page changers */
+* {
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    margin: 0 0 0 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+body{
+    background-color: gray;
+}
+
+/* Navigation bar styling */
+
+.naviBar{
+    background-color: black;
+    height: 57px;
+}
+
+.naviBar a {
+    transition: all 0.3s ease 0s;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+   .naviContainer{
     display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  input, textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #cccccc;
-    border-radius: 4px;
-  }
-  
-  button[type="submit"] {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+    flex-direction: row;
+    justify-content: space-between;
+   }
+   
+    .naviLogo{
+        width: 120px;
+        height: 57px;
+    }
+
+    .naviListMenu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 35vw;
+        padding-right: 25px;
+    }
+
+        .naviMenuItem .material-symbols-outlined{
+            scale: 130%;
+            padding-top: 5px;
+        }
+
+        .naviMenuItem a:hover {
+            color: blue;
+            font-size: 19px;
+            transition: all 0.5s ease 0s;
+        }
+
+        .naviMenuItem i:hover{
+            transform: scale(125%);
+            transition: all 0.2s ease 0s;
+        }
+
+        .naviDropdown{
+            overflow: hidden;
+        }
+
+            .naviDropbtn{
+                height: 57px;
+                font-size: 18px;
+                color: #fff;
+                border: none;
+                outline: none;
+                background-color: inherit;
+                font-family: inherit;
+                padding: 0 0 0 0;
+            }
+
+            .naviDropbtn:hover {
+                color: blue;
+                font-size: 19px;
+                transition: all 0.5s ease 0s;
+            }
+
+            .dropdown-content{
+                /* display: none; */
+                position: absolute;
+                background-color: black;
+                width: 150px;
+                box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+                z-index: 1;
+            }
+
+                .dropdownItem{
+                    float: none;
+                    padding: 12px 16px;
+                    display: block;
+                }
+
+                .dropdownItem:hover{
+                    background-color: gray;
+                    
+                }
+
+                .dropdownItem a:hover{
+                    font-size: 18px;
+                }
+
+            .dropdown-content a{
+                float: none;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+              }
+
+            
+/* Add Body */
+body,html 
+{
+	padding-top:65px;
+	background: url("/Users/shanmugaratnammohanaranjan/Jana/Informatics Institude Of Technology/Level 5/Semester 2/5 COS C021C Software Development Group Project/AcceptAssist/Code/About Us Page/Resources/app.jpg") no-repeat center center fixed;
+	background-position: top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;	
+	color:#fbfbfb;
+	/*background-position:50% 50%;*/
+}
+#container
+{
+	margin: 0 auto;
+	width: 100%; 
+	font-family: 'Raleway', sans-serif;
+	border-style: None;
+    border-color: #fbfbfb;	
+} 
 
 
-  /* form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  }
-  
-  h2 {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  input {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  button {
-    background-color: #333333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #333333;
-  } */
+
+
+			  .material-symbols-outlined {
+				font-variation-settings:
+				'FILL' 0,
+				'wght' 200,
+				'GRAD' 0,
+				'opsz' 48
+			}
+			
+			
+			
+			.footerArea {
+				position: absolute;
+				left: 0px;
+				right: 0px;
+				background-color: #474747;
+				color: #fff;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin: 0 0 0 0;
+				padding: 30px 2% 30px 2%;
+			}
+			
+				.ftColumn {
+					align-items: center;
+					justify-items: center;
+					width: 20%;
+				}
+			
+					#c1 a:hover {
+						transform: scale(115%);
+						transition: 0.4s;
+					}
+			
+				#c2 {
+					width: 30%;
+				}
+			
+					.ftColumn div {
+						display: flex;
+						justify-content: center;
+					}
+			
+					.ftColumn header {
+						display: flex;
+						justify-content: center;
+						margin-bottom: 20px;
+						font-size: 17px;
+					}
+			
+					#c2 header {
+						margin-bottom: -10px;
+						font-size: 17px;
+					}
+			
+						.ftColumn a {
+							font-size: 13px;
+							margin-bottom: 10px;
+							text-decoration: none;
+							color: #fff;
+						}
+			
+					.ftColumn span{
+						display: flex;
+						justify-content: center;
+						font-size: small;
+						margin-bottom: 10px;
+					}
+			
+						#ftInput {
+							height: 40px;
+							width: 100%;
+							margin: 20px 0;
+							border: none;
+							outline: none;
+							border-radius: 35px;
+							padding: 0 0 0 45px;
+							/* background: rgba(255, 255, 255, 0.3); */
+						}
+			
+							::-webkit-input-placeholder {
+								color: black;
+							}
+			
+							#ft_fa_mail {
+								position: relative;
+								top: 28px;
+								left: -91%;
+								color: rgba(103, 101, 101, 0.5);
+								
+							}
+			
+						#ftSubmit {
+							border: none;
+							outline: none;
+							border-radius: 30px;
+							font-size: 16px;
+							height: 45px;
+							width: 40%;
+							background: rgba(255, 255, 255, .9);
+							cursor: pointer;
+							transition: 0.3s;
+						}
+			
+							.ftSubmit [type="submit"] {
+								color: black;
+							}
+			
+							#ftSubmit:hover {
+								box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.3);
+								transform: scale(110%);
+								background-color: rgba(193, 255, 70, 0.782);
+								transition: 0.4s;
+							}
+			
+					#c3 {
+						flex-direction: column;
+					}
+			
+					.cIn {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+					}
+			
+						.cIn div {
+							margin-bottom: 5px;
+							font-size: 13px;
+						}
+			
+					.icon_links {
+						margin-top: 12px;
+						display: flex;
+						justify-content: center;
+						flex-direction: row;
+					}
+			
+						.addFT{
+							margin: 0 0 0 0;
+							padding: 5px 0 5px 0;
+							width: 40%;
+							display: flex;
+						}
+			
+							.iconIns {
+								width: 110%;
+							}
+			
+								.fa {
+									transform: scale(135%);
+								}
+			
+							.iconIns a:hover {
+								transform: scale(150%);
+								transition: 0.3s;
+							}
+			
+			
+							
+					
+			
+			
