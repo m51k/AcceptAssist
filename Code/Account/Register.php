@@ -221,6 +221,18 @@
                         $password = $_POST['password'];
                         $rePassword = $_POST['rePassword'];
 
+                    // create the users table if it doesnt exist
+                    $createTableQuery = "CREATE TABLE IF NOT EXISTS CREATE TABLE `Users` (
+                        `ID` int(11) NOT NULL,
+                        `Username` varchar(50) NOT NULL,
+                        `FullName` varchar(300) NOT NULL,
+                        `Email` varchar(200) NOT NULL,
+                        `MobileNumber` int(11) DEFAULT NULL,
+                        `Country` varchar(60) DEFAULT NULL,
+                        `Password` varchar(150) NOT NULL
+                    )";
+                    mysqli_query($conn, $createTableQuery);
+
                     //verifying the unique email
 
                     $verify_query = mysqli_query($con,"SELECT Username FROM Users WHERE Username='$username'");
