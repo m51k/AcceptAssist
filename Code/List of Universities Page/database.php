@@ -15,40 +15,41 @@
     </head>
     <body>
         <label for="rating-range">Select rating range:</label>
-        <form id="rating-form" method="GET">
-            <select id="rating-range" name="rank" onchange="document.getElementById('rating-form').submit()">
-                <option value="100-0">All</option>
-                <option value="100-80">100 - 80</option>
-                <option value="80-60">80 - 60</option>
-                <option value="60-40">60 - 40</option>
-                <option value="40-20">40 - 20</option>
-                <option value="20-0">20 - 0</option>
+        <form id="rank-form" method="GET">
+            <select id="rating-range" name="rank" onchange="document.getElementById('rank-form').submit()">
+                <option>Select Rank to Display</option>
+                <option value="0">All</option>
+                <option value="1">100 - 80</option>
+                <option value="2">80 - 60</option>
+                <option value="3">60 - 40</option>
+                <option value="4">40 - 20</option>
+                <option value="5">20 - 0</option>
             </select>
         </form>
         <?php
         $rank = $_GET['rank'];
         switch ($rank) {
-            case '100-0':
+            case '0':
                 $min = 0.0;
                 $max = 100.0;
                 break;
-            case '100-80':
+            case '1':
               $min = 80.0;
               $max = 100.0;
               break;
-            case '80-60':
+            case '2':
               $min = 60.0;
               $max = 80.0;
               break;
-            case '60-40':
+            case '3':
               $min = 40.0;
               $max = 60.0;
               break;
-            case '40-20':
+            case '4':
               $min = 20.0;
               $max = 40.0;
               break;
-            case '20-0':
+            case '5':
               $min = 0.0;
               $max = 20.0;
               break;
