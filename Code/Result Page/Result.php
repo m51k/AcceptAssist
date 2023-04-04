@@ -58,10 +58,11 @@ $uniNames = mysqli_query($con, $nameQuery);
 
 <body>
     <hr>
-    <h1>Results ,</h1>
-    <h3>Predicatios for University Selection</h3>  
+    <h1>Prediction Results</h1>
+    <h3>University Acceptance Prediction Results for Universities Ranked 1 though 5</h3>  
 
     <div class="main">
+        <!-- this can be improved by using a for loop with php to generate these blocks of code recursively-->
         <a href="../List of Universities Page/database.php?rank=1">
             <div class="card card-5">
                 <div class="text">Rank 1 Universities</div>
