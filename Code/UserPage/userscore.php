@@ -41,11 +41,11 @@ if(isset($_POST['submit'])) {
     $url = 'http://localhost:8000/api/acceptance-prediction/';
     $prediction = apiCall($url, $userScores);
 
-    echo "<p>Prediction: $prediction</p>";
+    echo "<p>$prediction</p>";
 }
 ?>
 
-<form method="POST">
+<form action="../Result Page/Result.php" method="POST">
     <label for="r_grescore">GRE Score:</label>
     <input type="text" id="r_grescore" name="r_grescore"><br><br>
 
@@ -71,6 +71,5 @@ if(isset($_POST['submit'])) {
 </form>
 
 <?php
-echo "<p>Prediction: $prediction</p>";
 echo "</body>";
 ?>
