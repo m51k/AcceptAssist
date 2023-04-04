@@ -46,8 +46,8 @@
                         </div> 
                         <div class="naviMenuItem"><a href="#">About</a></div>
                         <div class="naviMenuItem"><a href="#">Contact</a></div>
-                        <div class="naviMenuItem"><a href="/Code/Login_and_Register_Pages/PHP/logout.php">Logout</a></div>
-                        <div class="naviMenuItem"><a href="/Code/Login_and_Register_Pages/home.php"><i class="material-symbols-outlined">account_circle</i></a></div>
+                        <div class="naviMenuItem"><a href="/Code/Account/PHP/logout.php">Logout</a></div>
+                        <div class="naviMenuItem"><a href="/Code/Account/home.php"><i class="material-symbols-outlined">account_circle</i></a></div>
                     </div>
                 </div>
             </div>
