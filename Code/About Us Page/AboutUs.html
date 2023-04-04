@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lan="en">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About Us</title>
+    <link rel="stylesheet" href="AboutUs.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
   </head>
   <body>
-    <header>
-      <h1>About Us</h1>
-    </header>
-    <main>
+    
+      <nav>
+        <div class="naviBar">
+          <div class="naviContainer">
+              <div class="naviLogo">
+  
+              </div>
+  
+              <div class="naviListMenu">
+                  <div class="naviMenuItem"><a href="#">Home</a></div>
+                  <div class="naviMenuItem" class="naviDropdown">
+                      <button class="naviDropbtn">Resources 
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <!-- <div class="dropdown-content">
+                        <div class="dropdownItem"><a href="#">Get Prediction</a></div>
+                        <div class="dropdownItem"><a href="#">Search Universities</a></div>
+                      </div> -->
+                    </div> 
+                  <div class="naviMenuItem"><a href="#">About</a></div>
+                  <div class="naviMenuItem"><a href="#">Contact</a></div>
+                  <div class="naviMenuItem"><a href="/Code/Login_and_Register_Pages/PHP/logout.php">Logout</a></div>
+                  <div class="naviMenuItem"><a href="/Code/Login_and_Register_Pages/home.php"><i class="material-symbols-outlined">account_circle</i></a></div>
+              </div>
+          </div>
+      </div>
+      </nav>
       <section>
         <h2>Acceptassist</h2>
-        <p>
+        <p style="font-size: 18px; font-weight: bold; color:azure">
             This is the website to help you to find the best choice of unversty by predict you chance to get oppertunity 
             among the universities where you enrol and its raanks. It was founded to get an oppertunity to all student to enrol in 
             accademic studies. It was inspired by the students who were losse some oppertunities regarding their interestd of field od 
@@ -22,52 +54,102 @@
         </p>
       </section>
       <section>
-        <h2>Our Team</h2>
-        <p> 
-            Member 1
-            Member 2
-            Member 3
-            Member 4
-            Member 5
-        </p>
-      </section>
-      <section>
         <h2>Our Values</h2>
         <p>  Flow of our prediction works </p>
       </section>
-    </main>
-    <main>
-        <section>
-          <h2>About Us</h2>
-          <p> Every one get oppertuniy to enrol in unversity. </p>
-        </section>
+      <section>
+        <h2>Our Vision </h2>
         
-        <section>
-          <h2>Contact Us</h2>
-          <ul>
-            <li>Email: </li>
-            <li>Phone: </li>
-            <li>Address: </li>
-          </ul>
-        </section>
-      </main>
+      </section>
+      <section>
+        <h2>Our Mision</h2>
+      </section>
+    
+
       <section>
         <h2>Contact Us</h2>
         <form id="contact-form">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
-          
+          <br>
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
-          
+          <br>
           <label for="message">Message:</label>
           <textarea id="message" name="message" required></textarea>
-          
+          <br>
           <button type="submit">Submit</button>
         </form>
       </section>
-    <footer>
-      <p>&copy;All rights reserved.</p>
+
+      <section>
+        <h2>Our Team</h2>
+        
+      </section>
+      <footer>
+    
+        <div class="footerArea">
+            <div class="ftColumn" id="c1">
+                <header>USEFUL LINKS</header>
+
+                <div><a href="#">Home</a></div>                <!-- Add Link Here-->
+                <div><a href="#">Resoucers</a></div>           <!-- Add Link Here-->
+                <div><a href="#">About</a></div>               <!-- Add Link Here-->
+                <div><a href="#">Contact</a></div>             <!-- Add Link Here-->
+            </div>
+
+            <div class="ftColumn" id="c2">
+                <span>Get Late's news...</span>
+                <header>NEWSLETTER</header>
+
+                <form action="#">
+                    <div class="ftInput">
+                        <input type="email" name="ftEmail" id="ftInput" placeholder="Enter Your Email Here">
+                        <i class="material-symbols-outlined" id="ft_fa_mail"> mail </i>
+                    </div>
+                    <div class="ftSubmit">
+                        <input type="submit" value="Subscribe Now" id="ftSubmit">
+                    </div>
+                </form>
+            </div>
+
+            <div class="ftColumn" id="c3">
+                <header>CONTACT</header>
+
+                <div class="cIn">
+                    <div>Team Backout,</div> 
+                    <div>No.10, Trelawney Place, </div>
+                    <div>Colombo 04, </div>
+                    <div>Sri Lanka. </div>
+                </div>
+
+                <div class ="icon_links">
+                    <div class="addFT">
+                        <div class="iconIns">
+                            <a href="#">                <!-- Add instagram Link Here-->
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+
+                        <div class="iconIns">
+                            <a href="#">                <!-- Add facebook Link Here-->
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </div>
+
+                        <div class="iconIns">
+                            <a href="#">                <!-- Add Twitter Link Here-->
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    
+      <p>&copy; All rights reserved.</p>
     </footer>
   </body>
 </html>
