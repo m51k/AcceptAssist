@@ -40,8 +40,8 @@ cursor = conn.cursor()
 createTableQuery = """
 CREATE TABLE university_rankings (
     Name varchar(255) NOT NULL,
-    Rank varchar(255) NOT NULL,
-    Rating varchar(255) NOT NULL,
+    Rank int(255) NOT NULL,
+    Rating decimal(4,1) NOT NULL,
     Locations varchar(255) NOT NULL
 )
 """
