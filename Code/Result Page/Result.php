@@ -62,90 +62,98 @@ $uniNames = mysqli_query($con, $nameQuery);
     <h3>Predicatios for University Selection</h3>  
 
     <div class="main">
-        <div class="card card-5">
-            <div class="text">Rank 1 Universities</div>
-            <p class="card__apply">
-                <a class="card__link" href="#"></i></a> <!-- university website link-->
-            </p>
-            <br>
-            <div class="text">   Rank in Country - <!-- world rank -->
-                <br><div class="text">World Rank - </div> <!-- work rank -->
-                <div class="level">
-                    <div class="percent" style="width: 56%"></div>
-                </div>
-                <div class="percent-number">Predict Percentage - 
-                    <?php prediction(1) ?>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card card-5">
-            <div class="text">Rank 2 Universities</div>
-            <p class="card__apply">
-                <a class="card__link" href="#"></i></a> <!-- university website link-->
-            </p>
-            <br>
-            <div class="text">   Rank in Country - <!-- work rank -->
-                <br><div class="text">World Rank - </div> <!-- work rank -->
-                <div class="level">
-                    <div class="percent" style="width: 56%"></div>
-                </div>
-                <div class="percent-number">Predict Percentage - 
-                    <?php prediction(2) ?>
+        <a href="../List of Universities Page/database.php?rank=1">
+            <div class="card card-5">
+                <div class="text">Rank 1 Universities</div>
+                <p class="card__apply">
+                    <a class="card__link" href="#"></i></a> <!-- university website link-->
+                </p>
+                <br>
+                <div class="text">   Rank in Country - <!-- world rank -->
+                    <br><div class="text">World Rank - </div> <!-- work rank -->
+                    <div class="level">
+                        <div class="percent" style="width: 56%"></div>
+                    </div>
+                    <div class="percent-number">Predict Percentage - 
+                        <?php prediction(1) ?>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
+        <a href="../List of Universities Page/database.php?rank=2">
+            <div class="card card-5">
+                <div class="text">Rank 2 Universities</div>
+                <p class="card__apply">
+                    <a class="card__link" href="#"></i></a> <!-- university website link-->
+                </p>
+                <br>
+                <div class="text">   Rank in Country - <!-- work rank -->
+                    <br><div class="text">World Rank - </div> <!-- work rank -->
+                    <div class="level">
+                        <div class="percent" style="width: 56%"></div>
+                    </div>
+                    <div class="percent-number">Predict Percentage - 
+                        <?php prediction(2) ?>
+                    </div>
+                </div>
+            </div>
+        </a>
 
-        <div class="card card-5">
-            <div class="text">Rank 3 Universities</div>
-            <p class="card__apply">
-                <a class="card__link" href="#"></i></a> <!-- university website link-->
-            </p>
-            <br>
-            <div class="text">   Rank in Country - <!-- work rank -->
-                <br><div class="text">World Rank - </div> <!-- work rank -->
-                <div class="level">
-                    <div class="percent" style="width: 56%"></div>
-                </div>
-                <div class="percent-number">Predict Percentage - 
-                    <?php prediction(3) ?>
+        <a href="../List of Universities Page/database.php?rank=3">
+            <div class="card card-5">
+                <div class="text">Rank 3 Universities</div>
+                <p class="card__apply">
+                    <a class="card__link" href="#"></i></a> <!-- university website link-->
+                </p>
+                <br>
+                <div class="text">   Rank in Country - <!-- work rank -->
+                    <br><div class="text">World Rank - </div> <!-- work rank -->
+                    <div class="level">
+                        <div class="percent" style="width: 56%"></div>
+                    </div>
+                    <div class="percent-number">Predict Percentage - 
+                        <?php prediction(3) ?>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
 
-        <div class="card card-5">
-            <div class="text">Rank 4 Universities</div>
-            <p class="card__apply">
-                <a class="card__link" href="#"></i></a> <!-- university website link-->
-            </p>
-            <br>
-            <div class="text">   Rank in Country - <!-- work rank -->
-                <br><div class="text">World Rank - </div> <!-- work rank -->
-                <div class="level">
-                    <div class="percent" style="width: 56%"></div>
-                </div>
-                <div class="percent-number">Predict Percentage - 
-                    <?php prediction(4) ?>
+        <a href="../List of Universities Page/database.php?rank=4">
+            <div class="card card-5">
+                <div class="text">Rank 4 Universities</div>
+                <p class="card__apply">
+                    <a class="card__link" href="#"></i></a> <!-- university website link-->
+                </p>
+                <br>
+                <div class="text">   Rank in Country - <!-- work rank -->
+                    <br><div class="text">World Rank - </div> <!-- work rank -->
+                    <div class="level">
+                        <div class="percent" style="width: 56%"></div>
+                    </div>
+                    <div class="percent-number">Predict Percentage - 
+                        <?php prediction(4) ?>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
 
-        <div class="card card-5">
-            <div class="text">Rank 5 Universities</div>
-            <p class="card__apply">
-                <a class="card__link" href="#"></i></a> <!-- university website link-->
-            </p>
-            <br>
-            <div class="text">   Rank in Country - <!-- work rank -->
-                <br><div class="text">World Rank - </div> <!-- work rank -->
-                <div class="level">
-                    <div class="percent" style="width: 56%"></div>
-                </div>
-                <div class="percent-number">Predict Percentage - 
-                    <?php prediction(5) ?>
+        <a href="../List of Universities Page/database.php?rank=1">
+            <div class="card card-5">
+                <div class="text">Rank 5 Universities</div>
+                <p class="card__apply">
+                    <a class="card__link" href="#"></i></a> <!-- university website link-->
+                </p>
+                <br>
+                <div class="text">   Rank in Country - <!-- work rank -->
+                    <br><div class="text">World Rank - </div> <!-- work rank -->
+                    <div class="level">
+                        <div class="percent" style="width: 56%"></div>
+                    </div>
+                    <div class="percent-number">Predict Percentage - 
+                        <?php prediction(5) ?>
+                    </div>
                 </div>
             </div>
-        </div>
-        
+        </a>
 </body>
 </html>
