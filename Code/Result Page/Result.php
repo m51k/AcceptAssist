@@ -1,6 +1,7 @@
 <?php 
    session_start();
    include("../Login_and_Register_Pages/PHP/config.php");
+   include("../Navigation Bar & Footer/navi.html");
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result Tab</title>
     <link rel="stylesheet" href="Result.css">
-    
 </head>
 
 <?php

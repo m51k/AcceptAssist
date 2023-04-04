@@ -17,6 +17,7 @@
         <title>Home</title>
 
         <link rel="stylesheet" href="style/style.css">
+        <?php include("../Navigation Bar & Footer/navi.html"); ?>
     </head>
 
 
