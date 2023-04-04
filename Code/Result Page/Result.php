@@ -1,3 +1,7 @@
+<?php 
+   session_start();
+   include("../Login_and_Register_Pages/PHP/config.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +52,8 @@ function prediction($uni_rating) {
         echo "<p>$prediction</p>";
     }
 }
+$nameQuery = "SELECT Name FROM university_rankings WHERE Rank = 1 LIMIT 1";
+$uniNames = mysqli_query($con, $nameQuery);
 ?>
 
 <body>
@@ -57,12 +63,12 @@ function prediction($uni_rating) {
 
     <div class="main">
         <div class="card card-5">
-            <div class="text"><!--University Of Name--></div>
+            <div class="text">Rank 1 Universities</div>
             <p class="card__apply">
                 <a class="card__link" href="#"></i></a> <!-- university website link-->
-              </p>
+            </p>
             <br>
-            <div class="text">   Rank in Country - <!-- work rank -->
+            <div class="text">   Rank in Country - <!-- world rank -->
                 <br><div class="text">World Rank - </div> <!-- work rank -->
                 <div class="level">
                     <div class="percent" style="width: 56%"></div>
@@ -70,13 +76,11 @@ function prediction($uni_rating) {
                 <div class="percent-number">Predict Percentage - 
                     <?php prediction(1) ?>
                 </div>
-          
             </div>
-            
-        
         </div>
+        
         <div class="card card-5">
-            <div class="text"><!--University Of Name--></div>
+            <div class="text">Rank 2 Universities</div>
             <p class="card__apply">
                 <a class="card__link" href="#"></i></a> <!-- university website link-->
             </p>
@@ -93,7 +97,7 @@ function prediction($uni_rating) {
         </div>
 
         <div class="card card-5">
-            <div class="text"><!--University Of Name--></div>
+            <div class="text">Rank 3 Universities</div>
             <p class="card__apply">
                 <a class="card__link" href="#"></i></a> <!-- university website link-->
             </p>
@@ -110,7 +114,7 @@ function prediction($uni_rating) {
         </div>
 
         <div class="card card-5">
-            <div class="text"><!--University Of Name--></div>
+            <div class="text">Rank 4 Universities</div>
             <p class="card__apply">
                 <a class="card__link" href="#"></i></a> <!-- university website link-->
             </p>
@@ -127,7 +131,7 @@ function prediction($uni_rating) {
         </div>
 
         <div class="card card-5">
-            <div class="text"><!--University Of Name--></div>
+            <div class="text">Rank 5 Universities</div>
             <p class="card__apply">
                 <a class="card__link" href="#"></i></a> <!-- university website link-->
             </p>
