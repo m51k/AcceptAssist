@@ -70,57 +70,14 @@ body{
             transition: all 0.2s ease 0s;
         }
 
-        .naviDropdown{
-            overflow: hidden;
+        .dropdown-menu a{
+            color: black;
+            width: 200px;
+        }
+        
+        .dropdown-menu a:hover{
+            font-size: 18px;
         }
 
-            .naviDropbtn{
-                height: 57px;
-                font-size: 18px;
-                color: #fff;
-                border: none;
-                outline: none;
-                background-color: inherit;
-                font-family: inherit;
-                padding: 0 0 0 0;
-            }
-
-            .naviDropbtn:hover {
-                color: blue;
-                font-size: 19px;
-                transition: all 0.5s ease 0s;
-            }
-
-            .dropdown-content{
-                /* display: none; */
-                position: absolute;
-                background-color: black;
-                width: 150px;
-                box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
-                z-index: 1;
-            }
-
-                .dropdownItem{
-                    float: none;
-                    padding: 12px 16px;
-                    display: block;
-                }
-
-                .dropdownItem:hover{
-                    background-color: gray;
-                    
-                }
-
-                .dropdownItem a:hover{
-                    font-size: 18px;
-                }
-
-            .dropdown-content a{
-                float: none;
-            }
-
-            .dropdown:hover .dropdown-content {
-                display: block;
-              }
 
               
