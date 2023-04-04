@@ -18,9 +18,6 @@ echo "<h4>".$pagename."</h4>";
     <label for="r_toeflscore">TOEFL Score:</label>
     <input type="text" id="r_toeflscore" name="r_toeflscore"><br><br>
 
-    <label for="r_rating">University Rating:</label>
-    <input type="text" id="r_rating" name="r_rating"><br><br>
-
     <label for="r_sop">SOP:</label>
     <input type="text" id="r_sop" name="r_sop"><br><br>
 
