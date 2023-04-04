@@ -9,40 +9,6 @@ echo "<body>";
 echo "<h4>".$pagename."</h4>";
 //Capture and trim the 7 inputs entered in the the 7 fields of the form using the $_POST superglobal variable
 //Store these details into a set of 7 new local variables
-
-function apiCall($endpoint, $data) {
-    $init = curl_init();
-
-    curl_setopt_array($init, array(
-        CURLOPT_URL => $endpoint,
-        CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => $data,
-      ));
-
-      $response = curl_exec($init);
-
-      curl_close($init);
-
-      return $response;
-}
-
-if(isset($_POST['submit'])) {
-    $userScores = array(
-        'r_grescore' => trim($_POST['r_grescore']),
-        'r_toeflscore' => trim($_POST['r_toeflscore']),
-        'r_rating' => trim($_POST['r_rating']),
-        'r_sop' => trim($_POST['r_sop']),
-        'r_lor' => trim($_POST['r_lor']),
-        'r_cgpa' => trim($_POST['r_cgpa']),
-        'r_research' => trim($_POST['r_research'])
-    );
-
-    $rating = 3;
-    $url = 'http://localhost:8000/api/acceptance-prediction/';
-    $prediction = apiCall($url, $userScores);
-
-    echo "<p>$prediction</p>";
-}
 ?>
 
 <form action="../Result Page/Result.php" method="POST">
