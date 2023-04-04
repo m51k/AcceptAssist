@@ -18,7 +18,7 @@
         <form id="rank-form" method="GET">
             <select id="rating-range" name="rank" onchange="document.getElementById('rank-form').submit()">
                 <option>Select Rank to Display</option>
-                <option value="0">All</option>
+                <option value="0" selected>All</option>
                 <option value="1">100 - 80</option>
                 <option value="2">80 - 60</option>
                 <option value="3">60 - 40</option>
@@ -27,7 +27,7 @@
             </select>
         </form>
         <?php
-        $rank = $_GET['rank'];
+        $rank = isset($_GET['rank']) ? $_GET['rank'] : 0;
         switch ($rank) {
             case '0':
                 $min = 0.0;
