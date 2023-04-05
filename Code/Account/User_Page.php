@@ -18,8 +18,11 @@
 
         <link rel="stylesheet" href="./Style/User_Page.css">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>    
     </head>
 
 
@@ -30,23 +33,24 @@
             <div class="naviBar">
                 <div class="naviContainer">
                     <div class="naviLogo">
-
+                        <a href="#"><img src="./Resources/AcceptAssistWFTR.png" alt="" srcset="AcceptAssist Logo" class="naviImgLogo"></a>
                     </div>
 
                     <div class="naviListMenu">
                         <div class="naviMenuItem"><a href="#">Home</a></div>
                         <div class="naviMenuItem" class="naviDropdown">
-                            <button class="naviDropbtn">Resources 
-                            <i class="fa fa-caret-down"></i>
-                            </button>
-                            <!-- <div class="dropdown-content">
-                            <div class="dropdownItem"><a href="#">Get Prediction</a></div>
-                            <div class="dropdownItem"><a href="#">Search Universities</a></div>
-                            </div> -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Get Predict</a></li>
+                                <li><a class="dropdown-item" href="#">Universities List</a></li>
+                                <li><a class="dropdown-item" href="#">Search Universities</a></li>
+                                </ul>
+                            </li>
                         </div> 
                         <div class="naviMenuItem"><a href="#">About</a></div>
                         <div class="naviMenuItem"><a href="#">Contact</a></div>
-                        <div class="naviMenuItem"><a href="/Code/Account/PHP/logout.php">Logout</a></div>
+                        <div class="naviMenuItem"><a href="#">Logout</a></div>
                         <div class="naviMenuItem"><a href="/Code/Account/home.php"><i class="material-symbols-outlined">account_circle</i></a></div>
                     </div>
                 </div>
