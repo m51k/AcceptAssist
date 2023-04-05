@@ -1,7 +1,6 @@
 <?php 
    session_start();
-   include("../Login_and_Register_Pages/PHP/config.php");
-   include("../Navigation Bar & Footer/navi.html");
+   include("../Account/PHP/config.php");
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +62,7 @@ $uniNames = mysqli_query($con, $nameQuery);
 
     <div class="main">
         <!-- this can be improved by using a for loop with php to generate these blocks of code recursively-->
-        <a href="../List of Universities Page/database.php?rank=1">
+        <a href="../Universities_List/database.php?rank=1">
             <div class="card card-5">
                 <div class="text">Rank 1 Universities</div>
                 <p class="card__apply">
@@ -81,7 +80,7 @@ $uniNames = mysqli_query($con, $nameQuery);
                 </div>
             </div>
         </a>
-        <a href="../List of Universities Page/database.php?rank=2">
+        <a href="../Universities_List/database.php?rank=2">
             <div class="card card-5">
                 <div class="text">Rank 2 Universities</div>
                 <p class="card__apply">
@@ -100,7 +99,7 @@ $uniNames = mysqli_query($con, $nameQuery);
             </div>
         </a>
 
-        <a href="../List of Universities Page/database.php?rank=3">
+        <a href="../Universities_List/database.php?rank=3">
             <div class="card card-5">
                 <div class="text">Rank 3 Universities</div>
                 <p class="card__apply">
@@ -119,7 +118,7 @@ $uniNames = mysqli_query($con, $nameQuery);
             </div>
         </a>
 
-        <a href="../List of Universities Page/database.php?rank=4">
+        <a href="../Universities_List/database.php?rank=4">
             <div class="card card-5">
                 <div class="text">Rank 4 Universities</div>
                 <p class="card__apply">
@@ -138,7 +137,7 @@ $uniNames = mysqli_query($con, $nameQuery);
             </div>
         </a>
 
-        <a href="../List of Universities Page/database.php?rank=1">
+        <a href="../Universities_List/database.php?rank=1">
             <div class="card card-5">
                 <div class="text">Rank 5 Universities</div>
                 <p class="card__apply">

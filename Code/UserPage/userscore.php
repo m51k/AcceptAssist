@@ -1,7 +1,7 @@
 <?php
 session_start();
 $pagename="User Score"; //Create and populate a variable called $pagename
-echo "<link rel=stylesheet type=text/css href=>"; //Call in stylesheet
+echo "<link rel=stylesheet type=text/css href=User.css>"; //Call in stylesheet
 echo "<title>".$pagename."</title>";
 //display name of the page as window title
 echo "<body>";
@@ -11,7 +11,7 @@ echo "<h4>".$pagename."</h4>";
 //Store these details into a set of 7 new local variables
 ?>
 
-<form action="../Result Page/Result.php" method="POST">
+<form action="../Result/Result.php" method="POST">
     <label for="r_grescore">GRE Score:</label>
     <input type="text" id="r_grescore" name="r_grescore"><br><br>
 
