@@ -9,64 +9,68 @@
 
 /* Navigation bar styling */
 
-/* Unordered list styling part (selecting menue list part) */
-#navBarLi{
-    padding: 0;
-    margin: 0;
-    background-color: #474747;
-    margin: -10px;
-    font-weight: 400;
+.naviBar{
+    background-color: rgba(71, 71, 71, 1);
+    height: 57px;
+}
+
+.naviBar a {
+    transition: all 0.3s ease 0s;
+    color: #fff;
+    text-decoration: none;
     font-size: 18px;
 }
 
-    #navHeader{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 30px, 10%;
-        margin-left: 12%;
+   .naviContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+   }
+   
+    .naviLogo img{
+        width: 75px;
+        height: 57px;
     }
-        
-        #naviNav{
-            width: 56%;
+
+
+    .naviListMenu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 45vw;
+        padding-right: 25px;
+    }
+
+        .naviMenuItem .material-symbols-outlined{
+            scale: 130%;
+            padding-top: 5px;
         }
 
-            .navLinks li{
-                list-style: none;
-                display:inline-flex;
-                padding: 0, 20px;
-            }
+        .naviMenuItem a:hover {
+            color: rgb(67, 164, 255);
+            /* font-size: 19px; */
+            transition: all 0.5s ease 0s;
+        }
 
-            .navLinks li a{
-                transition: all 0.3s ease 0s;
-                text-decoration: none;
-                color: #fff;
-                padding-left: 30px;
-                padding-right: 10px;
-            }
+        .naviMenuItem i:hover{
+            transform: scale(125%);
+            transition: all 0.2s ease 0s;
+        }
 
-            .navLinks li a:hover{
-                transition: all 0.3s ease 0s;
-                color: rgb(164, 241, 255);
-            }
+        .dropdown-menu a{
+            color: black;
+            width: 200px;
+        }
 
-            .navLinks li a:active{
-                color: blue;
-            }
-
-/* Navigation bar logo */
-#navLogoArea{
-    width: 120px;
-    height: 57px;
-    margin-top: -4%;
-    background-color: rgb(0, 117, 251);
-    margin-right: auto;
-}
-
-    .webLogo{
-    cursor: pointer;
-    width: 100px;
-    }
+        .naviMenuItem{
+            list-style-type: none;
+        }
+        
+        .dropdown-menu a:hover{
+            font-size: 18px;
+        }
 
 
 
