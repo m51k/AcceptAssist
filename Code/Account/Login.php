@@ -80,7 +80,7 @@
             
                     }
                     if(isset($_SESSION['valid'])){
-                        header("Location: home.php");
+                        header("Location: User_Page.php");
                     }
 
                 }else{
