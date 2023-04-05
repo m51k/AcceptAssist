@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_api.predict import randomForestRegressor
+from acceptance_predictor.predict import randomForestRegressor
 
 # Create your views here.
 class PredictAcceptance(APIView):

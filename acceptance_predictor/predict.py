@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 def randomForestRegressor(gre, toefl, rating, sop, lor, cgpa, research):
-    data = pd.read_csv('rest_api/admit.csv')
+    data = pd.read_csv('acceptance_predictor/admit.csv')
     X = data.iloc[:, 1:8] # features
     y = data.iloc[:, 8] # target
     

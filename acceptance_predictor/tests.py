@@ -4,7 +4,7 @@ from django.test import TestCase
 import os
 
 # get the absolute path to the file
-file_path = os.path.abspath('rest_api/admit.csv')
+file_path = os.path.abspath('acceptance_predictor/admit.csv')
 
 # use the absolute path to open the file
 with open(file_path) as f:
