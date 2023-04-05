@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\sem4\acceptassist\env"
+VIRTUAL_ENV="C:\Users\Nep\Documents\Work\AcceptAssist\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
