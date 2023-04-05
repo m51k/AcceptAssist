@@ -75,7 +75,7 @@
 
 #RegisterPage{
     /* background-color: black; */
-    background-image: url(./Resources/university-westminster_web.jpg);
+    background-image: url(/Code/Account/Resources/UoWBG.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
