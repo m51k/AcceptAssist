@@ -23,7 +23,7 @@ body{
 /* Navigation bar styling */
 
 .naviBar{
-    background-color: black;
+    background-color: rgba(71, 71, 71, 0.3);
     height: 57px;
 }
 
@@ -38,12 +38,14 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 10px;
    }
    
-    .naviLogo{
-        width: 120px;
+    .naviLogo img{
+        width: 75px;
         height: 57px;
     }
+
 
     .naviListMenu{
         display: flex;
@@ -60,7 +62,7 @@ body{
         }
 
         .naviMenuItem a:hover {
-            color: blue;
+            color: rgb(67, 164, 255);
             /* font-size: 19px; */
             transition: all 0.5s ease 0s;
         }
@@ -73,6 +75,10 @@ body{
         .dropdown-menu a{
             color: black;
             width: 200px;
+        }
+
+        .naviMenuItem{
+            list-style-type: none;
         }
         
         .dropdown-menu a:hover{
