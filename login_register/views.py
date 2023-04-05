@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.contrib import messages
+from django.db import IntegrityError
 from .models import User
 # Create your views here.
 class Register:
@@ -14,13 +15,20 @@ class Register:
             password = request.POST.get('password')
             rePassword = request.POST.get('rePassword')
             
-            user = User.objects.create(username=userName, name=fullName, email=email, phone_number=phoneNo, country=country, password=password)
+            # check if passwords match
+            if password != rePassword:
+                messages.error(request, "Passwords do not match.")
+                render(request, "login_register/register.html") 
             
-            user.save()
+            # handle duplicate accounts
+            try:
+                user = User.objects.create(username=userName, name=fullName, email=email, phone_number=phoneNo, country=country, password=password)
+                user.save()
+                messages.success(request, "Success")
+                return redirect("login/")
+            except IntegrityError:
+                messages.error(request, "An account with this Username or Email already exists.")
             
-            messages.success(request, "Success")
-            
-            return redirect("login/")
         return render(request, "login_register/register.html")
 
 class Login:
