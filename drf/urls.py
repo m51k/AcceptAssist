@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from acceptance_predictor.views import PredictAcceptance
-
+from login_register.views import Register
+from login_register.views import Login
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/acceptance-prediction/', PredictAcceptance.as_view(), name='prediction')
+    path('api/acceptance-prediction/', PredictAcceptance.as_view(), name='prediction'),
+    path("register/", Register.register, name="register"),
+    path("login/", Login.login, name="login")
 ]
