@@ -125,7 +125,7 @@
                                         <p>Hello <b><?php echo $res_Username ?></b>
                                         </p>
                                     </h1>
-                                    <p class="sumDiscrip">We provide your university admission predictions based on based on GRE Score, TOEFL Score and CGPA</p>
+                                    <p class="sumDiscrip">We provide your university admission predictions based on GRE Score, TOEFL Score and CGPA</p>
                                 </div>
                             </div>
 
