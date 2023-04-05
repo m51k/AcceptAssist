@@ -99,7 +99,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(Code/Account/Resources/UserPage.png);
+    background-image: url(/Code/Account/Resources/UserPage.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
