@@ -23,24 +23,24 @@
     <div class="naviBar">
         <div class="naviContainer">
             <div class="naviLogo">
-                <a href="#"><img src="./Resources/AcceptAssistWFTR.png" alt="" srcset="AcceptAssist Logo" class="naviImgLogo"></a>
+                <a href="../Start/start.html"><img src="./Resources/AcceptAssistWFTR.png" alt="" srcset="AcceptAssist Logo" class="naviImgLogo"></a>
             </div>
 
             <div class="naviListMenu">
-                <div class="naviMenuItem"><a href="#">Home</a></div>
+                <div class="naviMenuItem"><a href="../Start/start.html">Home</a></div>
                 <div class="naviMenuItem" class="naviDropdown">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Get Predict</a></li>
-                          <li><a class="dropdown-item" href="#">Universities List</a></li>
-                          <li><a class="dropdown-item" href="#">Search Universities</a></li>
+                        <li><a class="dropdown-item" href="../UserPage/userscore.php">Get Predict</a></li>        <!-- Add link here -->
+                        <li><a class="dropdown-item" href="../Universities_List/database.php">Universities List</a></li>  <!-- Add link here -->
+                        <li><a class="dropdown-item" href="../Searching/Search.html">Search Universities</a></li>
                         </ul>
-                      </li>
+                    </li>
                 </div> 
-                <div class="naviMenuItem"><a href="#">About</a></div>
-                <div class="naviMenuItem"><a href="#">Contact</a></div>
-                <div class="naviMenuItem"><a href="#">Additional</a></div> <!-- add another option if needed -->
+                <div class="naviMenuItem"><a href="../Start/start.html#team">Team</a></div>
+                <div class="naviMenuItem"><a href="../Start/start.html#contact">Contact</a></div>
+                <!-- <div class="naviMenuItem"><a href="#">Additional</a></div> add another option if needed -->
                 <div class="naviMenuItem"><a href="/Code/Account/home.php"><i class="material-symbols-outlined">account_circle</i></a></div>
             </div>
         </div>

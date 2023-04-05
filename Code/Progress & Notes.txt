@@ -59,15 +59,4 @@ Google Icons:
 
 
 
-Data Base Created For users
-
-CREATE TABLE Users (
-    DB_ID			integer			PRIMARY KEY AUTO_INCREMENT,
-    DB_Username		varchar(50)		NOT null,
-    DB_Name			varchar(200)	NOT null,
-    DB_Email		varchar(200)	NOT null,
-    DB_PhoneNo		integer,
-    DB_Country		varchar(60),
-    Password 		varchar(100)	NOT null
-);
 

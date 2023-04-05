@@ -10,7 +10,7 @@
 /* Navigation bar styling */
 
 .naviBar{
-    background-color: rgba(71, 71, 71, 1);
+    background-color: rgba(40, 58, 90, 0.9);
     height: 57px;
 }
 
@@ -18,7 +18,7 @@
     transition: all 0.3s ease 0s;
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
    .naviContainer{
@@ -39,7 +39,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 45vw;
+        width: 33vw;
         padding-right: 25px;
     }
 
