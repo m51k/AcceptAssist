@@ -156,8 +156,6 @@
                             <label> Already have an account? <a href="./Login.php">Sign in</a></label>
                         </div>
                     </div>
-
-                <?php } ?>
             </div>
         </div>
     </div>
