@@ -17,4 +17,4 @@ class PredictAcceptance(APIView):
         
         prediction = randomForestRegressor(gre, toefl, rating, sop, lor, cgpa, research)
 
-        return Response(prediction[0], status=status.HTTP_200_OK)
+        return Response(prediction, status=status.HTTP_200_OK)
