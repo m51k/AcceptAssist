@@ -140,7 +140,7 @@ body{
                     outline: none;
                     border-radius: 35px;
                     height: 50px;
-                    width: 50vw;
+                    width: 62vw;
                     padding: 0 0 0 50px;
                     font-size: 16px;
                     color: #000;
@@ -148,7 +148,7 @@ body{
 
                 .searchBox i {
                     position: relative;
-                    left: -49vw;
+                    left: -61vw;
                     top: 6px;
                     color: #000;
                 }
@@ -162,30 +162,13 @@ body{
                             font-size: 16px;
                         }
 
-                #selectOP {
-                    border: none;
-                    outline: none;
-                    border-radius: 35px;
-                    font-size: 16px;
-                    height: 50px;
-                    width: 13vw;
-                    background: rgba(255, 255, 255, 0.7);
-                    transition: 0.3s;
-                    cursor: pointer;
-                }
-
-                    #selectOP:hover {
-                        box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.3);
-                        transition: 0.3s;
-                    }
-
                 #btnSearch {
                     border: none;
                     outline: none;
                     border-radius: 30px;
                     font-size: 16px;
                     height: 50px;
-                    width: 12vw;
+                    width: 15vw;
                     background: rgba(0, 106, 255, 0.7);
                     cursor: pointer;
                     transition: 0.3s;
