@@ -9,29 +9,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body style="background-image: url(./Resources/university-westminster_web.jpg); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
-    <div id="navBar" style="position: fixed; width: 100vw; margin-top: -9.3%;">
-        <div id="navBarLi">
-            <header id="navHeader">
-                <!-- <div id="navLogoArea">
-                    <img class="webLogo" src="./westminster-img.png" alt="Web page logo">
-                </div> -->
-                <nav id="naviNav">
-                    <ul class="navLinks">
-                        <li><a href="Home.php">Home</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">Explore</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="./PHP/logout.php">Logout</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-        <div id="navLogoArea">
-            <a href="#"><img class="webLogo" src="./Resources/westminster-img.png" alt="Web page logo"></a>
+    
+    <div class="naviBar">
+        <div class="naviContainer">
+            <div class="naviLogo">
+                <a href="#"><img src="./Resources/AcceptAssistWFTR.png" alt="" srcset="AcceptAssist Logo" class="naviImgLogo"></a>
+            </div>
+
+            <div class="naviListMenu">
+                <div class="naviMenuItem"><a href="#">Home</a></div>
+                <div class="naviMenuItem" class="naviDropdown">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Get Predict</a></li>
+                          <li><a class="dropdown-item" href="#">Universities List</a></li>
+                          <li><a class="dropdown-item" href="#">Search Universities</a></li>
+                        </ul>
+                      </li>
+                </div> 
+                <div class="naviMenuItem"><a href="#">About</a></div>
+                <div class="naviMenuItem"><a href="#">Contact</a></div>
+                <div class="naviMenuItem"><a href="#">Additional</a></div> <!-- add another option if needed -->
+                <div class="naviMenuItem"><a href="/Code/Account/home.php"><i class="material-symbols-outlined">account_circle</i></a></div>
+            </div>
         </div>
     </div>
 
