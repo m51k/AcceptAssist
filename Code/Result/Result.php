@@ -83,7 +83,7 @@ $uniNames = mysqli_query($con, $nameQuery);
                 <div class="naviMenuItem"><a href="../Start/start.html#team">Team</a></div>
                 <div class="naviMenuItem"><a href="../Start/start.html#contact">Contact</a></div>
                 <!-- <div class="naviMenuItem"><a href="#">Additional</a></div> add another option if needed -->
-                <div class="naviMenuItem"><a href="/Code/Account/home.php"><i class="material-symbols-outlined">account_circle</i></a></div>
+                <div class="naviMenuItem"><a href="../Account/User_Page.php"><i class="material-symbols-outlined">account_circle</i></a></div>
             </div>
         </div>
     </div>
