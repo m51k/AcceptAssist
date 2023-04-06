@@ -6,8 +6,8 @@
 }
 body{
     background-image: url(WP1.jpg);
-    
-    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 hr{
     margin-top: 5%;
@@ -82,7 +82,8 @@ h3{
     border-radius: 10px;
     align-items: center;
     overflow: hidden;
-    margin-left: 480px;
+    margin-top: 10px;
+    margin-left: 250px;
   }
   
   .percent {

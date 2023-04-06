@@ -1,0 +1,221 @@
+/* Imported Google Font - Quicksand, link for google fonts site - https://fonts.google.com/specimen/Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* Whole page changers */
+* {
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navigation bar styling */
+
+.naviBar{
+    background-color: rgba(40, 58, 90, 0.9);
+    height: 57px;
+}
+
+.naviBar a {
+    transition: all 0.3s ease 0s;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+   .naviContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+   }
+   
+    .naviLogo img{
+        width: 75px;
+        height: 57px;
+    }
+
+
+    .naviListMenu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 33vw;
+        padding-right: 25px;
+    }
+
+        .naviMenuItem .material-symbols-outlined{
+            scale: 130%;
+            padding-top: 5px;
+        }
+
+        .naviMenuItem a:hover {
+            color: rgb(67, 164, 255);
+            /* font-size: 19px; */
+            transition: all 0.5s ease 0s;
+        }
+
+        .naviMenuItem i:hover{
+            transform: scale(125%);
+            transition: all 0.2s ease 0s;
+        }
+
+        .dropdown-menu a{
+            color: black;
+            width: 200px;
+        }
+
+        .naviMenuItem{
+            list-style-type: none;
+        }
+        
+        .dropdown-menu a:hover{
+            font-size: 18px;
+        }
+
+        .footerArea {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 0;
+            background-color: #474747;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0 0 0;
+            padding: 30px 2% 30px 2%;
+        }
+        
+            .ftColumn {
+                align-items: center;
+                justify-items: center;
+                width: 20%;
+            }
+        
+                #c1 a:hover {
+                    transform: scale(115%);
+                    transition: 0.4s;
+                }
+        
+            #c2 {
+                width: 30%;
+            }
+        
+                .ftColumn div {
+                    display: flex;
+                    justify-content: center;
+                }
+        
+                .ftColumn header {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    font-size: 17px;
+                }
+        
+                #c2 header {
+                    margin-bottom: -10px;
+                    font-size: 17px;
+                }
+        
+                    .ftColumn a {
+                        font-size: 13px;
+                        margin-bottom: 10px;
+                        text-decoration: none;
+                        color: #fff;
+                    }
+        
+                .ftColumn span{
+                    display: flex;
+                    justify-content: center;
+                    font-size: small;
+                    margin-bottom: 10px;
+                }
+        
+                    #ftInput {
+                        height: 40px;
+                        width: 100%;
+                        margin: 20px 0;
+                        border: none;
+                        outline: none;
+                        border-radius: 35px;
+                        padding: 0 0 0 45px;
+                        /* background: rgba(255, 255, 255, 0.3); */
+                    }
+        
+                        ::-webkit-input-placeholder {
+                            color: black;
+                        }
+        
+                        #ft_fa_mail {
+                            position: relative;
+                            top: 28px;
+                            left: -91%;
+                            color: rgba(103, 101, 101, 0.5);
+                            
+                        }
+        
+                    #ftSubmit {
+                        border: none;
+                        outline: none;
+                        border-radius: 30px;
+                        font-size: 16px;
+                        height: 45px;
+                        width: 40%;
+                        background: rgba(255, 255, 255, .9);
+                        cursor: pointer;
+                        transition: 0.3s;
+                    }
+        
+                        .ftSubmit [type="submit"] {
+                            color: black;
+                        }
+        
+                        #ftSubmit:hover {
+                            box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.3);
+                            transform: scale(110%);
+                            background-color: rgba(193, 255, 70, 0.782);
+                            transition: 0.4s;
+                        }
+        
+                #c3 {
+                    flex-direction: column;
+                }
+        
+                .cIn {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+        
+                    .cIn div {
+                        margin-bottom: 5px;
+                        font-size: 13px;
+                    }
+        
+                .icon_links {
+                    margin-top: 12px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                }
+        
+                    .addFT{
+                        margin: 0 0 0 0;
+                        padding: 5px 0 5px 0;
+                        width: 40%;
+                        display: flex;
+                    }
+        
+                        .iconIns {
+                            width: 110%;
+                        }
+        
+                            .fa {
+                                transform: scale(135%);
+                            }
+        
+                        .iconIns a:hover {
+                            transform: scale(150%);
+                            transition: 0.3s;
+                        }
