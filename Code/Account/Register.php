@@ -74,7 +74,7 @@
                         `Country` varchar(60) DEFAULT NULL,
                         `Password` varchar(150) NOT NULL
                     )";
-                    mysqli_query($conn, $createTableQuery);
+                    mysqli_query($con, $createTableQuery);
 
                     //verifying the unique email
 
