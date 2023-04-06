@@ -101,7 +101,7 @@
 
                     <div class="TnC">
                         <input type="checkbox" name="check" id="check" required>
-                        <label for="check"> I have read and agree with <a href="">terms & coditions</a></label>  <!-- Add terms and conditions -->
+                        <label for="check"> I have read and agree with <a href="" target="_blank">terms & coditions</a></label>  <!-- Add terms and conditions -->
                     </div>
 
                     <div class="input_field">

@@ -160,7 +160,7 @@
 
                     <div class="bottom">
                         <div class="signin">
-                            <label> Already have an account? <a href="./Login.php">Sign in</a></label>
+                            <label> Already have an account? <a href="./Login.php" target="_blank">Sign in</a></label>
                         </div>
                     </div>
             </div>
