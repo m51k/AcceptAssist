@@ -44,7 +44,7 @@
                                 <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="../UserPage/userscore.php">Get Predict</a></li>        <!-- Add link here -->
                                 <li><a class="dropdown-item" href="../Universities_List/database.php">Universities List</a></li>  <!-- Add link here -->
-                                <li><a class="dropdown-item" href="../Searching/Search.html">Search Universities</a></li>
+                                <li><a class="dropdown-item" href="../Searching/SearchResult.php">Search Universities</a></li>
                                 </ul>
                             </li>
                         </div> 
@@ -125,7 +125,7 @@
                                         <p>Hello <b><?php echo $res_Username ?></b>
                                         </p>
                                     </h1>
-                                    <p class="sumDiscrip">We provide your university admission predictions based on GRE Score, TOEFL Score and CGPA</p>
+                                    <p class="sumDiscrip"></p>
                                 </div>
                             </div>
 

@@ -76,7 +76,7 @@ $uniNames = mysqli_query($con, $nameQuery);
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="../UserPage/userscore.php">Get Predict</a></li>        <!-- Add link here -->
                         <li><a class="dropdown-item" href="../Universities_List/database.php">Universities List</a></li>  <!-- Add link here -->
-                        <li><a class="dropdown-item" href="../Searching/Search.html">Search Universities</a></li>
+                        <li><a class="dropdown-item" href="../Searching/SearchResult.php">Search Universities</a></li>
                         </ul>
                     </li>
                 </div> 
